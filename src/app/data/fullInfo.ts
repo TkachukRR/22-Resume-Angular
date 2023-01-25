@@ -1,4 +1,6 @@
-const fullInfo = Object.freeze({
+import { MyInfo } from '../models/myInfo';
+
+const fullInfo: MyInfo{} = Object.freeze({
   firstName: {
     en: 'Roman',
     pl: 'Roman',
