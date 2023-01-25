@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-introduce',
   templateUrl: './introduce.component.html',
 })
-export class IndroduceComponent {}
+export class IndroduceComponent {
+  title = 'roman tkachuk';
+}
