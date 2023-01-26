@@ -25,5 +25,9 @@ export interface MyInfo {
     ua: string;
   };
 
-  subinfo: string;
+  subInfo: {
+    en: string;
+    pl: string;
+    ua: string;
+  };
 }

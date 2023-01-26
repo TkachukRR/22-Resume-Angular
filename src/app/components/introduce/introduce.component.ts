@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MyInfo } from 'src/app/models/myInfo';
 
 @Component({
   selector: 'app-introduce',
   templateUrl: './introduce.component.html',
 })
 export class IndroduceComponent {
-  title = 'roman tkachuk';
+  @Input() info: MyInfo;
 }

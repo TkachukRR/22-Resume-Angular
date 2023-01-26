@@ -1,6 +1,6 @@
 import { MyInfo } from '../models/myInfo';
 
-const fullInfo: MyInfo{} = Object.freeze({
+export const fullInfo: MyInfo = Object.freeze({
   firstName: {
     en: 'Roman',
     pl: 'Roman',
@@ -27,5 +27,9 @@ const fullInfo: MyInfo{} = Object.freeze({
     ua: 'Шукаю посаду Junior Frontend розробника. Маю велику мотивацію отримувати нові знання та застосовувати їх на реальних проектах. Я хороший командний гравець та віддаю перевагу налагодженню комунікацій всередині команди. Крім того, маю організаційні навички та відповідально ставлюся до виконання задач. Постійно займаюся саморозвитком у програмуванні та вдосконаленням знань англійської мови.',
   },
 
-  subinfo: 'I am considering work in all cities and am ready to move.',
+  subInfo: {
+    en: 'I am considering work in all cities and I am ready to move.',
+    pl: 'Rozważam pracę we wszystkich miastach i jestem gotowy do przeprowadzki.',
+    ua: 'Розглядаю роботу в усіх містах і готовий до переїзду.',
+  },
 });
