@@ -30,4 +30,12 @@ export interface MyInfo {
     pl: string;
     ua: string;
   };
+
+  contacts: {
+    phone: Array<string>;
+    email: string;
+    telegram: string;
+    linkedIn: string;
+    gitHub: string;
+  };
 }

@@ -7,4 +7,5 @@ import { MyInfo } from 'src/app/models/myInfo';
 })
 export class IndroduceComponent {
   @Input() info: MyInfo;
+  @Input() pageLanguage: string;
 }

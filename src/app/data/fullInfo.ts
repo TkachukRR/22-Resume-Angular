@@ -32,4 +32,45 @@ export const fullInfo: MyInfo = Object.freeze({
     pl: 'Rozważam pracę we wszystkich miastach i jestem gotowy do przeprowadzki.',
     ua: 'Розглядаю роботу в усіх містах і готовий до переїзду.',
   },
+
+  contacts: {
+    phone: ['+380979501906', '+48662276720'],
+    email: 'tkachukrr@gmail.com',
+    telegram: 'https://t.me/TkachukRR',
+    linkedIn: 'https://www.linkedin.com/in/roman-tkachuk-2a4337234',
+    gitHub: 'https://github.com/TkachukRR',
+  },
+
+  projects: [
+    {
+      title: 'hogwarts',
+      url: 'https://tkachukrr.github.io/19-hogwarts/',
+      urlGit: 'https://github.com/TkachukRR/19-hogwarts',
+      stack: ['JavaScript', 'CSS', 'HTML'],
+    },
+    {
+      title: 'Web-studio',
+      url: 'https://tkachukrr.github.io/09-web-studio/',
+      urlGit: 'https://github.com/TkachukRR/09-web-studio',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      title: 'GooDreamShop',
+      url: 'https://tkachukrr.github.io/14-GooDreamShop/',
+      urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      title: 'Christmas trees',
+      url: 'https://tkachukrr.github.io/06-christmas-trees/',
+      urlGit: 'https://github.com/TkachukRR/06-christmas-trees/',
+      stack: ['HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      title: 'Resume',
+      url: 'https://tkachukrr.github.io/00-Resume/',
+      urlGit: 'https://github.com/TkachukRR/00-Resume/',
+      stack: ['React', 'JavaScript', 'CSS', 'HTML'],
+    },
+  ],
 });

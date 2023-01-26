@@ -1,3 +1,7 @@
 <div class="max-2-2xl container mx-auto pt-5">
-  <app-introduce [info]="fullInfo"></app-introduce>
+  <app-langButtons
+    (langBtnValue)="onLangBtnClick($event)"
+    [langList]="languages"
+  ></app-langButtons>
+  <app-introduce [info]="fullInfo" [pageLanguage]="pageLang"></app-introduce>
 </div>
