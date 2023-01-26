@@ -9,6 +9,4 @@ import { fullInfo as data } from './data/fullInfo';
 })
 export class AppComponent {
   fullInfo: MyInfo = data;
-  languages = Object.keys(data.firstName);
-  setLang: string = Object.keys(data.firstName)[0];
 }
