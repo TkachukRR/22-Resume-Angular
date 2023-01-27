@@ -1,0 +1,11 @@
+<ul class="py-4 px-6 border rounded flex items-center flew-row mb-2 flex-wrap">
+  <li
+    class="py-4 px-6 basis-[33%] border rounded"
+    *ngFor="let proj of projectList.projects"
+  >
+    <h3>{{ proj.title }}</h3>
+    <p>{{ proj.stack }}</p>
+    <a [href]="proj.link" class="block">{{ proj.link }}</a>
+    <a [href]="proj.urlGit" class="block">{{ proj.urlGit }}</a>
+  </li>
+</ul>

@@ -44,31 +44,31 @@ export const fullInfo: MyInfo = Object.freeze({
   projects: [
     {
       title: 'hogwarts',
-      url: 'https://tkachukrr.github.io/19-hogwarts/',
+      link: 'https://tkachukrr.github.io/19-hogwarts/',
       urlGit: 'https://github.com/TkachukRR/19-hogwarts',
       stack: ['JavaScript', 'CSS', 'HTML'],
     },
     {
       title: 'Web-studio',
-      url: 'https://tkachukrr.github.io/09-web-studio/',
+      link: 'https://tkachukrr.github.io/09-web-studio/',
       urlGit: 'https://github.com/TkachukRR/09-web-studio',
       stack: ['HTML', 'CSS', 'JavaScript'],
     },
     {
       title: 'GooDreamShop',
-      url: 'https://tkachukrr.github.io/14-GooDreamShop/',
+      link: 'https://tkachukrr.github.io/14-GooDreamShop/',
       urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
       stack: ['HTML', 'CSS', 'JavaScript'],
     },
     {
       title: 'Christmas trees',
-      url: 'https://tkachukrr.github.io/06-christmas-trees/',
+      link: 'https://tkachukrr.github.io/06-christmas-trees/',
       urlGit: 'https://github.com/TkachukRR/06-christmas-trees/',
       stack: ['HTML', 'CSS', 'JavaScript'],
     },
     {
       title: 'Resume',
-      url: 'https://tkachukrr.github.io/00-Resume/',
+      link: 'https://tkachukrr.github.io/00-Resume/',
       urlGit: 'https://github.com/TkachukRR/00-Resume/',
       stack: ['React', 'JavaScript', 'CSS', 'HTML'],
     },
