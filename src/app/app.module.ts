@@ -7,6 +7,7 @@ import { IndroduceComponent } from './components/introduce/introduce.component';
 import { LangButtonsComponent } from './components/langButtons/LangButtons.component';
 import { FormsModule } from '@angular/forms';
 import { ProjectsGalleryComponent } from './components/projectsGallery/projectsGallery.component';
+import { EducationListComponent } from './components/educationList/educationList.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ProjectsGalleryComponent } from './components/projectsGallery/projectsG
     IndroduceComponent,
     LangButtonsComponent,
     ProjectsGalleryComponent,
+    EducationListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

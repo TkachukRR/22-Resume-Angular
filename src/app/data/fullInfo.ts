@@ -74,14 +74,105 @@ export const fullInfo: MyInfo = Object.freeze({
     },
   ],
 
-  education: [
-    {
-      institution: "National Aerospace University М.E. Zhukovsky 'KHАІ'",
-      rank: 'Specialist',
-      period: {
-        start: '2004-09-01T00:00:00',
-        end: '2009-06-31T00:00:00',
-      },
+  educations: {
+    sectionTitle: {
+      en: 'Education:',
+      pl: 'Edukacja:',
+      ua: 'Освіта:',
     },
-  ],
+    institutions: [
+      {
+        en: {
+          institution: '"Andersen" -  Software Development Company',
+          rank: 'Trainee',
+          direction: 'JS Core intensive',
+          period: {
+            start: '20022-11-10T00:00:00',
+            end: '2023-01-20T00:00:00',
+          },
+        },
+        pl: {
+          institution: '"Andersen" - innowacyjne kursy IT',
+          rank: 'Stażysta',
+          direction: 'Intensywny JS Core',
+          period: {
+            start: '20022-11-10T00:00:00',
+            end: '2023-01-20T00:00:00',
+          },
+        },
+        ua: {
+          institution:
+            '"Andersen" - Компанія з розробки програмного забезпечення',
+          rank: 'Стажер',
+          direction: 'JS Core-інтенсив',
+          period: {
+            start: '20022-11-10T00:00:00',
+            end: '2023-01-20T00:00:00',
+          },
+        },
+      },
+      {
+        en: {
+          institution: '"GoIT" -  innovative IT courses',
+          rank: 'Developer',
+          direction: 'Fullstack JavaScript developer',
+          period: {
+            start: '20021-11-01T00:00:00',
+            end: '2022-09-31T00:00:00',
+          },
+        },
+        pl: {
+          institution: '"GoIT" - innowacyjne kursy IT',
+          rank: 'Developer',
+          direction: 'Fullstack JavaScript developer',
+          period: {
+            start: '20021-11-01T00:00:00',
+            end: '2022-09-31T00:00:00',
+          },
+        },
+        ua: {
+          institution: '"GoIT" - платформа IT-курсів',
+          rank: 'Розробник',
+          direction: 'Fullstack JavaScript developer',
+          period: {
+            start: '20021-11-01T00:00:00',
+            end: '2022-09-31T00:00:00',
+          },
+        },
+      },
+      {
+        en: {
+          institution: "National Aerospace University М.E. Zhukovsky 'KHАІ'",
+          rank: 'Specialist',
+          direction:
+            'Technologies and means of telecommunications, qualified as a specialist in electronics and telecommunications',
+          period: {
+            start: '2004-09-01T00:00:00',
+            end: '2009-06-31T00:00:00',
+          },
+        },
+        pl: {
+          institution: 'Aero-Kosmiczny Uniwersytet Narodowy w Charkowie „HАІ”',
+          rank: 'Specialist',
+          direction:
+            'Technologie i środki telekomunikacyjne - posiadam kwalifikacje specjalisty w dziedzinie elektroniki i telekomunikacji.',
+          period: {
+            start: '2004-09-01T00:00:00',
+            end: '2009-06-31T00:00:00',
+          },
+        },
+        ua: {
+          institution:
+            'Національний Аерокосмічний Університет М.Є. Жуковського "ХАІ"',
+          rank: 'Спеціаліст',
+          direction:
+            'Технології та засоби телекомунікацій, здобув кваліфікацію інженера в галузі електроніки та телекомунікацій.',
+          period: {
+            start: '2004-09-01T00:00:00',
+            end: '2009-06-31T00:00:00',
+          },
+        },
+      },
+    ],
+  },
 });

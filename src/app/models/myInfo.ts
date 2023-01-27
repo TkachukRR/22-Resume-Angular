@@ -38,4 +38,13 @@ export interface MyInfo {
     linkedIn: string;
     gitHub: string;
   };
+
+  educations: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
+    institutions: Array<Object>;
+  };
 }

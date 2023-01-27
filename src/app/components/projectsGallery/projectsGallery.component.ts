@@ -7,7 +7,5 @@ import { Component, Input } from '@angular/core';
 export class ProjectsGalleryComponent {
   @Input() projectList: any;
 
-  ngOnInit(): void {
-    console.log(this.projectList.projects);
-  }
+  ngOnInit(): void {}
 }

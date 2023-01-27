@@ -1,0 +1,16 @@
+<h2>{{ info.educations.sectionTitle[pageLanguage] | titlecase }}</h2>
+<ul class="py-4 px-6 border rounded mb-2">
+  <li
+    *ngFor="let instit of info.educations.institutions"
+    class="py-4 px-6 border rounded"
+  >
+    <h3>{{ instit[pageLanguage].institution }}</h3>
+    <p>
+      {{ instit[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
+      {{ instit[pageLanguage].period.end | date : "dd.MM.YYYY" }}
+      |
+      {{ instit[pageLanguage].rank }}
+    </p>
+    <p>{{ instit[pageLanguage].direction }}</p>
+  </li>
+</ul>
