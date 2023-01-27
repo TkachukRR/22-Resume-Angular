@@ -1,14 +1,23 @@
-<div class="max-2-2xl container mx-auto pt-5">
-  <app-langButtons
-    (langBtnValue)="onLangBtnClick($event)"
-    [langList]="languages"
-  ></app-langButtons>
-  <app-introduce [info]="fullInfo" [pageLanguage]="pageLang"></app-introduce>
-  <app-projectsGallery [projectList]="fullInfo"></app-projectsGallery>
+<div class="container mx-auto pt-5 flex">
+  <main class="max-w-4xl">
+    <app-langButtons
+      (langBtnValue)="onLangBtnClick($event)"
+      [langList]="languages"
+    ></app-langButtons>
+    <app-introduce [info]="fullInfo" [pageLanguage]="pageLang"></app-introduce>
+    <app-projectsGallery [projectList]="fullInfo"></app-projectsGallery>
 
-  <app-educationList
-    [info]="fullInfo"
-    [pageLanguage]="pageLang"
-  ></app-educationList>
-  <app-workList [info]="fullInfo" [pageLanguage]="pageLang"></app-workList>
+    <app-educationList
+      [info]="fullInfo"
+      [pageLanguage]="pageLang"
+    ></app-educationList>
+    <app-workList [info]="fullInfo" [pageLanguage]="pageLang"></app-workList>
+  </main>
+  <aside class="w-xs">
+    <img
+      class="block w-72"
+      src="https://tkachukrr.github.io/00-Resume/img/photo.jpg"
+      alt="{{ fullInfo.firstName.en }} {{ fullInfo.lastName.en }}"
+    />
+  </aside>
 </div>
