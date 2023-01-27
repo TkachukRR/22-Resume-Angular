@@ -73,4 +73,15 @@ export const fullInfo: MyInfo = Object.freeze({
       stack: ['React', 'JavaScript', 'CSS', 'HTML'],
     },
   ],
+
+  education: [
+    {
+      institution: "National Aerospace University М.E. Zhukovsky 'KHАІ'",
+      rank: 'Specialist',
+      period: {
+        start: '2004-09-01T00:00:00',
+        end: '2009-06-31T00:00:00',
+      },
+    },
+  ],
 });
