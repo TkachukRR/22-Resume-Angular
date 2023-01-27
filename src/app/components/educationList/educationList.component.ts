@@ -6,6 +6,8 @@ import { MyInfo } from 'src/app/models/myInfo';
   templateUrl: './educationList.component.html',
 })
 export class EducationListComponent {
+  now: Number = Date.now();
+
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
 }

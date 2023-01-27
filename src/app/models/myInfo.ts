@@ -47,4 +47,13 @@ export interface MyInfo {
     };
     institutions: Array<Object>;
   };
+
+  works: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
+    companies: Array<Object>;
+  };
 }

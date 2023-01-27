@@ -1,0 +1,17 @@
+<h2>{{ info.works.sectionTitle[pageLanguage] | titlecase }}</h2>
+<ul class="py-4 px-6 border rounded mb-2">
+  <li *ngFor="let job of info.works.companies" class="py-4 px-6 border rounded">
+    <h3>{{ job[pageLanguage].position }} {{ job[pageLanguage].company }}</h3>
+    <p>
+      {{ job[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
+      {{ job[pageLanguage].period.end | date : "dd.MM.YYYY" }}
+      |
+      {{ job[pageLanguage].location }}
+    </p>
+    <ul>
+      <li *ngFor="let responsibility of job[pageLanguage].responsibilities">
+        {{ responsibility }}
+      </li>
+    </ul>
+  </li>
+</ul>

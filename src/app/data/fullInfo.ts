@@ -85,6 +85,36 @@ export const fullInfo: MyInfo = Object.freeze({
         en: {
           institution: '"Andersen" -  Software Development Company',
           rank: 'Trainee',
+          direction: 'Angular Framework intensive',
+          period: {
+            start: '20023-01-21T00:00:00',
+            end: '',
+          },
+        },
+        pl: {
+          institution: '"Andersen" - Firma programistyczna',
+          rank: 'Stażysta',
+          direction: 'Intensywny Angular Framework',
+          period: {
+            start: '20023-01-21T00:00:00',
+            end: '',
+          },
+        },
+        ua: {
+          institution:
+            '"Andersen" - Компанія з розробки програмного забезпечення',
+          rank: 'Стажер',
+          direction: 'Angular Framework - інтенсив',
+          period: {
+            start: '20023-01-21T00:00:00',
+            end: '',
+          },
+        },
+      },
+      {
+        en: {
+          institution: '"Andersen" -  Software Development Company',
+          rank: 'Trainee',
           direction: 'JS Core intensive',
           period: {
             start: '20022-11-10T00:00:00',
@@ -92,7 +122,7 @@ export const fullInfo: MyInfo = Object.freeze({
           },
         },
         pl: {
-          institution: '"Andersen" - innowacyjne kursy IT',
+          institution: '"Andersen" - Firma programistyczna',
           rank: 'Stażysta',
           direction: 'Intensywny JS Core',
           period: {
@@ -171,6 +201,104 @@ export const fullInfo: MyInfo = Object.freeze({
             start: '2004-09-01T00:00:00',
             end: '2009-06-31T00:00:00',
           },
+        },
+      },
+    ],
+  },
+
+  works: {
+    sectionTitle: {
+      en: 'Work experience:',
+      pl: 'Doświadczenie zawodowe:',
+      ua: 'Досвід роботи:',
+    },
+    companies: [
+      {
+        en: {
+          company: 'Smart Garden',
+          position: 'CEO',
+          location: 'Kharkiv',
+          period: {
+            start: '2009-08-01T00:00:00',
+            end: '2021-11-01T00:00:00',
+          },
+          responsibilities: [
+            'Installation of automatic irrigation systems, repair and maintenance of systems',
+            'Creation of a plan of the site, creation of construction drawings',
+            'Creating a 3-d model of the site, development of projects in CAD KOMPAS 3D',
+            'Meetings and negotiations with customers, purchase of equipment, delivery of objects',
+          ],
+        },
+        pl: {
+          company: 'Smart Garden',
+          position: 'CEO',
+          location: 'Charków',
+          period: {
+            start: '2009-08-01T00:00:00',
+            end: '2021-11-01T00:00:00',
+          },
+          responsibilities: [
+            'Montaż automatycznych systemów nawadniających, naprawa i konserwacja systemów',
+            'Tworzenie planu sytuacyjnego, tworzenie dokumentacji technicznej',
+            'Opracowywanie projektów w CAD KOMPAS 3D, instalacja modelu 3D w Realtime Landscaping Architect',
+            'Spotkania i negocjacje z klientami, zakup sprzętu, dostawa zaopatrzenia',
+          ],
+        },
+        ua: {
+          company: 'Smart Garden',
+          position: 'Директор',
+          location: 'Харків',
+          period: {
+            start: '2009-08-01T00:00:00',
+            end: '2021-11-01T00:00:00',
+          },
+          responsibilities: [
+            'Монтаж систем автоматичного поливу, ремонт та обслуговування систем',
+            'Створення плану ділянки, створення технічної документації',
+            'Розробка проектів у CAD KOMPAS 3D, монтаж 3D-прогулянки у Realtime Landscaping Architect',
+            "Зустрічі та переговори з замовниками, придбання обладнання, здача об'єктів",
+          ],
+        },
+      },
+      {
+        en: {
+          company: 'LLC “Еcodis”',
+          position: 'Engineer',
+          location: 'Kharkiv',
+          period: {
+            start: '2006-08-01T00:00:00',
+            end: '2009-09-01T00:00:00',
+          },
+          responsibilities: [
+            'Installation of automatic irrigation systems, repair and maintenance of systems',
+            'Creation of a plan of the site, creation of construction drawings',
+          ],
+        },
+        pl: {
+          company: 'LLC “Еcodis”',
+          position: 'Inżynier',
+          location: 'Charków',
+          period: {
+            start: '2006-08-01T00:00:00',
+            end: '2009-09-01T00:00:00',
+          },
+          responsibilities: [
+            'Montaż automatycznych systemów nawadniających, naprawa i konserwacja systemów',
+            'Tworzenie planu sytuacyjnego, tworzenie dokumentacji technicznej',
+          ],
+        },
+        ua: {
+          company: 'ТОВ “Екодіс”',
+          position: 'Інженер',
+          location: 'Charków',
+          period: {
+            start: '2006-08-01T00:00:00',
+            end: '2009-09-01T00:00:00',
+          },
+          responsibilities: [
+            'Монтаж систем автоматичного поливу, ремонт та обслуговування систем',
+            'Створення плану ділянки, створення технічної документації',
+          ],
         },
       },
     ],

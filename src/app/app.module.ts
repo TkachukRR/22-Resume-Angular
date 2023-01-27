@@ -8,6 +8,7 @@ import { LangButtonsComponent } from './components/langButtons/LangButtons.compo
 import { FormsModule } from '@angular/forms';
 import { ProjectsGalleryComponent } from './components/projectsGallery/projectsGallery.component';
 import { EducationListComponent } from './components/educationList/educationList.component';
+import { WorkListComponent } from './components/workList/workList.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { EducationListComponent } from './components/educationList/educationList
     LangButtonsComponent,
     ProjectsGalleryComponent,
     EducationListComponent,
+    WorkListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
