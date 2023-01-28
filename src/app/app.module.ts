@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ProjectsGalleryComponent } from './components/projectsGallery/projectsGallery.component';
 import { EducationListComponent } from './components/educationList/educationList.component';
 import { WorkListComponent } from './components/workList/workList.component';
+import { BirthdayComponent } from './components/birthday/birthday.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { WorkListComponent } from './components/workList/workList.component';
     ProjectsGalleryComponent,
     EducationListComponent,
     WorkListComponent,
+    BirthdayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
