@@ -11,9 +11,21 @@ export interface MyInfo {
     ua: string;
   };
 
-  dateOfBirh: string;
+  dateOfBirh: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
+    date: string;
+  };
 
   location: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
     en: string;
     pl: string;
     ua: string;
@@ -32,6 +44,11 @@ export interface MyInfo {
   };
 
   contacts: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
     phone: Array<string>;
     email: string;
     telegram: string;
@@ -55,5 +72,49 @@ export interface MyInfo {
       ua: string;
     };
     companies: Array<Object>;
+  };
+
+  skills: {
+    tech: {
+      sectionTitle: {
+        en: string;
+        pl: string;
+        ua: string;
+      };
+      list: Array<string>;
+    };
+
+    languages: {
+      sectionTitle: {
+        en: string;
+        pl: string;
+        ua: string;
+      };
+      en: Array<Object>;
+      pl: Array<Object>;
+      ua: Array<Object>;
+    };
+
+    soft: {
+      sectionTitle: {
+        en: string;
+        pl: string;
+        ua: string;
+      };
+      en: Array<string>;
+      pl: Array<string>;
+      ua: Array<string>;
+    };
+  };
+
+  hobbies: {
+    sectionTitle: {
+      en: string;
+      pl: string;
+      ua: string;
+    };
+    en: Array<string>;
+    pl: Array<string>;
+    ua: Array<string>;
   };
 }

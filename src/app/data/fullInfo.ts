@@ -13,9 +13,21 @@ export const fullInfo: MyInfo = Object.freeze({
     ua: 'Ткачук',
   },
 
-  dateOfBirh: '1987-08-27T00:00:00',
+  dateOfBirh: {
+    sectionTitle: {
+      en: 'Date of birth:',
+      pl: 'Data urodzenia:',
+      ua: 'Дата народження:',
+    },
+    date: '1987-08-27T00:00:00',
+  },
 
   location: {
+    sectionTitle: {
+      en: 'Location:',
+      pl: 'Lokalizacja:',
+      ua: 'Локація:',
+    },
     en: 'Warsaw, before the war - Kharkiv',
     pl: 'Warszawa, przed wojną – Charków',
     ua: 'Варшава, до війни - Харків',
@@ -34,6 +46,11 @@ export const fullInfo: MyInfo = Object.freeze({
   },
 
   contacts: {
+    sectionTitle: {
+      en: 'Contacts:',
+      pl: 'Kontakt:',
+      ua: 'Контакти:',
+    },
     phone: ['+380979501906', '+48662276720'],
     email: 'tkachukrr@gmail.com',
     telegram: 'https://t.me/TkachukRR',
@@ -301,6 +318,141 @@ export const fullInfo: MyInfo = Object.freeze({
           ],
         },
       },
+    ],
+  },
+
+  skills: {
+    tech: {
+      sectionTitle: {
+        en: 'Tech Skills:',
+        pl: 'Umiejętności techniczne:',
+        ua: 'Технічні навички:',
+      },
+      list: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'SASS',
+        'BEM',
+        'Figma',
+        'GitHub',
+        'Adobe Photoshop',
+        'Responsive/adaptive web design',
+        'CAD KOMPAS 3D',
+        'Realtime landscaping Architect',
+      ],
+    },
+
+    languages: {
+      sectionTitle: {
+        en: 'Language Skills:',
+        pl: 'Znajomość języków:',
+        ua: 'Знання мов:',
+      },
+      en: [
+        {
+          language: 'Ukrainian',
+          skill: 'expert',
+        },
+        {
+          language: 'English',
+          skill: 'intermediate',
+        },
+        {
+          language: 'Polish',
+          skill: 'pre-Intermediate',
+        },
+        {
+          language: 'Russian',
+          skill: 'expert',
+        },
+      ],
+      pl: [
+        {
+          language: 'Ukraiński',
+          skill: 'ekspert',
+        },
+        {
+          language: 'Angielski',
+          skill: 'zaawansowany',
+        },
+        {
+          language: 'Polski',
+          skill: 'początkujący',
+        },
+        {
+          language: 'Rosyjski',
+          skill: 'ekspert',
+        },
+      ],
+      ua: [
+        {
+          language: 'Українська',
+          skill: 'експерт',
+        },
+        {
+          language: 'Англійська',
+          skill: 'середній',
+        },
+        {
+          language: 'Польська',
+          skill: 'нижче середнього',
+        },
+        {
+          language: 'Російська',
+          skill: 'експерт',
+        },
+      ],
+    },
+
+    soft: {
+      sectionTitle: {
+        en: 'Soft Skills:',
+        pl: 'Umiejętności dodatkowe:',
+        ua: 'Особисті якості:',
+      },
+      en: [
+        'Efficient communicator, good at collaboration',
+        'Time-management',
+        'Creativity',
+        'Problem solving',
+        'Stress tolerance',
+      ],
+      pl: [
+        'Komunikatywność',
+        'Umiejętność pracy w grupie',
+        'Kreatywność',
+        'Umiejętność rozwiązywania problemów',
+        'Dobra organizacja pracy',
+      ],
+      ua: [
+        'Комунікабельність',
+        'Тайм-менеджмент',
+        'Креативність',
+        'Вирішення проблемних задач',
+        'Стресостійкість',
+      ],
+    },
+  },
+
+  hobbies: {
+    sectionTitle: {
+      en: 'Hobbies:',
+      pl: 'Zainteresowania:',
+      ua: 'Хобі:',
+    },
+    en: ['Guitar', 'Volleyball', 'Automation system', 'Walks and traveling'],
+    pl: [
+      'Gra na gitarze',
+      'Siatkówka',
+      'Systemy automatyki',
+      'Spacery i podróże',
+    ],
+    ua: [
+      'Гітара',
+      'Волейбол',
+      'Автоматизація систем',
+      'Прогулянки та подорожі',
     ],
   },
 });
