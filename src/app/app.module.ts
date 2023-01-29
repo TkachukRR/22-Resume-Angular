@@ -10,6 +10,7 @@ import { ProjectsGalleryComponent } from './components/projectsGallery/projectsG
 import { EducationListComponent } from './components/educationList/educationList.component';
 import { WorkListComponent } from './components/workList/workList.component';
 import { BirthdayComponent } from './components/birthday/birthday.component';
+import { LocationComponent } from './components/location/location.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BirthdayComponent } from './components/birthday/birthday.component';
     EducationListComponent,
     WorkListComponent,
     BirthdayComponent,
+    LocationComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
