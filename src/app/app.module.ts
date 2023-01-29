@@ -11,6 +11,7 @@ import { EducationListComponent } from './components/educationList/educationList
 import { WorkListComponent } from './components/workList/workList.component';
 import { BirthdayComponent } from './components/birthday/birthday.component';
 import { LocationComponent } from './components/location/location.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LocationComponent } from './components/location/location.component';
     WorkListComponent,
     BirthdayComponent,
     LocationComponent,
+    ContactsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

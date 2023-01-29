@@ -1,0 +1,21 @@
+<h2>{{ info.contacts.sectionTitle[pageLanguage] }}</h2>
+<address>
+  <a
+    class="block"
+    *ngFor="let phone of info.contacts.phone"
+    href="tel:{{ phone }}"
+    >{{ phone }}</a
+  >
+  <a class="block" href="mailto:{{ info.contacts.email }}">{{
+    info.contacts.email
+  }}</a>
+  <a class="block" href="{{ info.contacts.telegram }}">{{
+    info.contacts.telegram
+  }}</a>
+  <a class="block" href="{{ info.contacts.linkedIn }}">{{
+    info.contacts.linkedIn
+  }}</a>
+  <a class="block" href="{{ info.contacts.gitHub }}">{{
+    info.contacts.gitHub
+  }}</a>
+</address>
