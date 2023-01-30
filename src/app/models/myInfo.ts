@@ -81,7 +81,9 @@ export interface MyInfo {
         pl: string;
         ua: string;
       };
-      list: Array<string>;
+      en: Array<string>;
+      pl: Array<string>;
+      ua: Array<string>;
     };
 
     languages: {
