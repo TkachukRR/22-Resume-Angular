@@ -1,5 +1,5 @@
 <div class="max-w-screen-xl container mx-auto pt-5 flex flex-row-reverse">
-  <main class="">
+  <main class="p-3">
     <app-langButtons
       (langBtnValue)="onLangBtnClick($event)"
       [langList]="languages"
@@ -17,14 +17,22 @@
     <app-workList [info]="fullInfo" [pageLanguage]="pageLang"></app-workList>
   </main>
 
-  <aside class="max-w-sm">
+  <aside class="max-w-sm p-3">
     <img
-      class="block w-96"
+      class="block w-96 mb-3"
       src="https://tkachukrr.github.io/00-Resume/img/photo.jpg"
       alt="{{ fullInfo.firstName.en }} {{ fullInfo.lastName.en }}"
     />
-    <app-birthday [info]="fullInfo" [pageLanguage]="pageLang"></app-birthday>
-    <app-location [info]="fullInfo" [pageLanguage]="pageLang"></app-location>
+    <app-birthday
+      class="block mb-3"
+      [info]="fullInfo"
+      [pageLanguage]="pageLang"
+    ></app-birthday>
+    <app-location
+      class="block mb-3"
+      [info]="fullInfo"
+      [pageLanguage]="pageLang"
+    ></app-location>
     <app-contacts [info]="fullInfo" [pageLanguage]="pageLang"></app-contacts>
     <app-skills [info]="fullInfo" [pageLanguage]="pageLang"></app-skills>
     <app-hobbies [info]="fullInfo" [pageLanguage]="pageLang"></app-hobbies>

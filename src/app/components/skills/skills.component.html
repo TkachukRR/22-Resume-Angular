@@ -1,9 +1,12 @@
 <article *ngFor="let skillSection of info.skills | keyvalue">
-  <h1>
+  <h1 class="font-bold">
     {{ skillSection.value.sectionTitle[pageLanguage] }}
   </h1>
   <ul class="py-4 px-6 border rounded mb-2">
-    <li *ngFor="let skill of skillSection.value[pageLanguage]">
+    <li
+      class="list-disc"
+      *ngFor="let skill of skillSection.value[pageLanguage]"
+    >
       {{
         !skill.hasOwnProperty("language") && !skill.hasOwnProperty("skill")
           ? skill

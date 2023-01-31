@@ -1,8 +1,8 @@
-<h2>{{ info.educations.sectionTitle[pageLanguage] }}</h2>
-<ul class="py-4 px-6 border rounded mb-2">
+<h2 class="font-bold">{{ info.educations.sectionTitle[pageLanguage] }}</h2>
+<ul class="py-2 px-2 border rounded mb-2">
   <li
     *ngFor="let instit of info.educations.institutions"
-    class="py-4 px-6 border rounded"
+    class="py-4 px-6 border rounded mb-2 last:mb-0"
   >
     <h3>{{ instit[pageLanguage].institution }}</h3>
     <p>
