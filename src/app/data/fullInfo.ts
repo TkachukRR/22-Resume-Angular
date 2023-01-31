@@ -60,6 +60,18 @@ export const fullInfo: MyInfo = Object.freeze({
 
   projects: [
     {
+      title: 'calculator-js',
+      link: 'https://tkachukrr.github.io/Calculator-JS/',
+      urlGit: 'https://github.com/TkachukRR/Calculator-JS',
+      stack: ['JavaScript', 'CSS', 'HTML'],
+    },
+    {
+      title: 'exchange',
+      link: 'https://tkachukrr.github.io/18-exchange/',
+      urlGit: 'https://github.com/TkachukRR/18-exchange',
+      stack: ['JavaScript', 'CSS', 'HTML'],
+    },
+    {
       title: 'hogwarts',
       link: 'https://tkachukrr.github.io/19-hogwarts/',
       urlGit: 'https://github.com/TkachukRR/19-hogwarts',
@@ -84,10 +96,10 @@ export const fullInfo: MyInfo = Object.freeze({
       stack: ['HTML', 'CSS', 'JavaScript'],
     },
     {
-      title: 'Resume',
+      title: 'Resume v1',
       link: 'https://tkachukrr.github.io/00-Resume/',
       urlGit: 'https://github.com/TkachukRR/00-Resume/',
-      stack: ['React', 'JavaScript', 'CSS', 'HTML'],
+      stack: ['HTML', 'CSS', 'JavaScript'],
     },
   ],
 
