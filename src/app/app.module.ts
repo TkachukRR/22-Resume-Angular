@@ -13,6 +13,7 @@ import { BirthdayComponent } from './components/birthday/birthday.component';
 import { LocationComponent } from './components/location/location.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HobbiesComponent } from './components/hobbies/hobbies.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SkillsComponent } from './components/skills/skills.component';
     LocationComponent,
     ContactsComponent,
     SkillsComponent,
+    HobbiesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
