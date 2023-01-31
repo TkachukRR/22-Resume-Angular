@@ -2,7 +2,7 @@
   <h1>
     {{ skillSection.value.sectionTitle[pageLanguage] }}
   </h1>
-  <ul>
+  <ul class="py-4 px-6 border rounded mb-2">
     <li *ngFor="let skill of skillSection.value[pageLanguage]">
       {{
         !skill.hasOwnProperty("language") && !skill.hasOwnProperty("skill")
