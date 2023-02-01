@@ -7,7 +7,10 @@
 
     <app-introduce [info]="fullInfo" [pageLanguage]="pageLang"></app-introduce>
 
-    <app-projectsGallery [projectList]="fullInfo"></app-projectsGallery>
+    <app-projectsGallery
+      [projectList]="fullInfo"
+      [pageLanguage]="pageLang"
+    ></app-projectsGallery>
 
     <app-educationList
       [info]="fullInfo"

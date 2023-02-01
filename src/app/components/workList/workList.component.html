@@ -9,7 +9,11 @@
     <h3>{{ job[pageLanguage].position }} {{ job[pageLanguage].company }}</h3>
     <p>
       {{ job[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
-      {{ job[pageLanguage].period.end | date : "dd.MM.YYYY" }}
+      {{
+        job[pageLanguage].period.end
+          ? (job[pageLanguage].period.end | date : "dd.MM.YYYY")
+          : "now"
+      }}
       |
       {{ job[pageLanguage].location }}
     </p>

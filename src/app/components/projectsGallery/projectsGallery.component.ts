@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectsGalleryComponent {
   @Input() projectList: any;
+  @Input() pageLanguage: string;
 
   ngOnInit(): void {}
 }

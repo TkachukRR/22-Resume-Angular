@@ -58,50 +58,57 @@ export const fullInfo: MyInfo = Object.freeze({
     gitHub: 'https://github.com/TkachukRR',
   },
 
-  projects: [
-    {
-      title: 'calculator-js',
-      link: 'https://tkachukrr.github.io/Calculator-JS/',
-      urlGit: 'https://github.com/TkachukRR/Calculator-JS',
-      stack: ['JavaScript', 'CSS', 'HTML'],
+  projects: {
+    sectionTitle: {
+      en: 'Projects:',
+      pl: 'Projektowanie:',
+      ua: 'Проекти:',
     },
-    {
-      title: 'exchange',
-      link: 'https://tkachukrr.github.io/18-exchange/',
-      urlGit: 'https://github.com/TkachukRR/18-exchange',
-      stack: ['JavaScript', 'CSS', 'HTML'],
-    },
-    {
-      title: 'hogwarts',
-      link: 'https://tkachukrr.github.io/19-hogwarts/',
-      urlGit: 'https://github.com/TkachukRR/19-hogwarts',
-      stack: ['JavaScript', 'CSS', 'HTML'],
-    },
-    {
-      title: 'Web-studio',
-      link: 'https://tkachukrr.github.io/09-web-studio/',
-      urlGit: 'https://github.com/TkachukRR/09-web-studio',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-    },
-    {
-      title: 'GooDreamShop',
-      link: 'https://tkachukrr.github.io/14-GooDreamShop/',
-      urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-    },
-    {
-      title: 'Christmas trees',
-      link: 'https://tkachukrr.github.io/06-christmas-trees/',
-      urlGit: 'https://github.com/TkachukRR/06-christmas-trees/',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-    },
-    {
-      title: 'Resume v1',
-      link: 'https://tkachukrr.github.io/00-Resume/',
-      urlGit: 'https://github.com/TkachukRR/00-Resume/',
-      stack: ['HTML', 'CSS', 'JavaScript'],
-    },
-  ],
+    list: [
+      {
+        title: 'calculator-js',
+        link: 'https://tkachukrr.github.io/Calculator-JS/',
+        urlGit: 'https://github.com/TkachukRR/Calculator-JS',
+        stack: ['JavaScript', 'CSS', 'HTML'],
+      },
+      {
+        title: 'exchange',
+        link: 'https://tkachukrr.github.io/18-exchange/',
+        urlGit: 'https://github.com/TkachukRR/18-exchange',
+        stack: ['JavaScript', 'CSS', 'HTML'],
+      },
+      {
+        title: 'hogwarts',
+        link: 'https://tkachukrr.github.io/19-hogwarts/',
+        urlGit: 'https://github.com/TkachukRR/19-hogwarts',
+        stack: ['JavaScript', 'CSS', 'HTML'],
+      },
+      {
+        title: 'Web-studio',
+        link: 'https://tkachukrr.github.io/09-web-studio/',
+        urlGit: 'https://github.com/TkachukRR/09-web-studio',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        title: 'GooDreamShop',
+        link: 'https://tkachukrr.github.io/14-GooDreamShop/',
+        urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        title: 'Christmas trees',
+        link: 'https://tkachukrr.github.io/06-christmas-trees/',
+        urlGit: 'https://github.com/TkachukRR/06-christmas-trees/',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+      },
+      {
+        title: 'Resume v1',
+        link: 'https://tkachukrr.github.io/00-Resume/',
+        urlGit: 'https://github.com/TkachukRR/00-Resume/',
+        stack: ['HTML', 'CSS', 'JavaScript'],
+      },
+    ],
+  },
 
   educations: {
     sectionTitle: {

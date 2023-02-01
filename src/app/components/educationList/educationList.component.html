@@ -8,8 +8,9 @@
     <p>
       {{ instit[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
       {{
-        (!instit[pageLanguage].period.end && now) ||
-          instit[pageLanguage].period.end | date : "dd.MM.YYYY"
+        instit[pageLanguage].period.end
+          ? (instit[pageLanguage].period.end | date : "dd.MM.YYYY")
+          : "now"
       }}
       |
       {{ instit[pageLanguage].rank }}
