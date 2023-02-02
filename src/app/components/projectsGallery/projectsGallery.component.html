@@ -1,7 +1,7 @@
 <h2 class="font-bold">{{ projectList.projects.sectionTitle[pageLanguage] }}</h2>
 <ul class="grid grid-cols-2 place-content-stretch gap-2">
   <li
-    class="py-4 px-6 border rounded"
+    class="py-4 px-6 border rounded overflow-hidden"
     *ngFor="let proj of projectList.projects.list"
   >
     <h3>{{ proj.title }}</h3>
