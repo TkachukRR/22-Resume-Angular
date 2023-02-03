@@ -66,6 +66,18 @@ export const fullInfo: MyInfo = Object.freeze({
     },
     list: [
       {
+        title: 'Resume v2',
+        link: 'https://tkachukrr.github.io/22-Resume-Angular/',
+        urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
+        stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'Tailwindcss'],
+      },
+      {
+        title: 'Angular APP',
+        link: 'https://tkachukrr.github.io/23-angular-training-app/',
+        urlGit: 'https://github.com/TkachukRR/23-angular-training-app/',
+        stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'SCSS'],
+      },
+      {
         title: 'calculator-js',
         link: 'https://tkachukrr.github.io/Calculator-JS/',
         urlGit: 'https://github.com/TkachukRR/Calculator-JS',
