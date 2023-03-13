@@ -11,6 +11,12 @@ export interface MyInfo {
     ua: string;
   };
 
+  lookingFor: {
+    en: string;
+    pl: string;
+    ua: string;
+  };
+
   dateOfBirh: {
     sectionTitle: {
       en: string;

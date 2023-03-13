@@ -1,12 +1,19 @@
-<h2 class="font-bold">
+<h2 class="font-bold mb-3 flex items-center">
+  <svg-icon
+    class="mr-2"
+    [src]="src"
+    [svgStyle] =" { 'width.rem': 2, 'height.rem': 2 } ">
+  </svg-icon>
   {{ info.works.sectionTitle[pageLanguage] }}
 </h2>
-<ul class="py-2 px-2 border rounded mb-2">
+<ul class="py-2 px-2 mb-3">
   <li
     *ngFor="let job of info.works.companies"
     class="py-4 px-6 border rounded mb-2 last:mb-0"
   >
-    <h3>{{ job[pageLanguage].position }} {{ job[pageLanguage].company }}</h3>
+    <h3 class="font-bold">
+    {{ job[pageLanguage].company }}
+    </h3>
     <p>
       {{ job[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
       {{
@@ -15,10 +22,10 @@
           : "now"
       }}
       |
-      {{ job[pageLanguage].location }}
+      <span class="font-bold">{{ job[pageLanguage].position }}</span>
     </p>
     <ul>
-      <li *ngFor="let responsibility of job[pageLanguage].responsibilities">
+      <li class="" *ngFor="let responsibility of job[pageLanguage].responsibilities">
         {{ responsibility }}
       </li>
     </ul>

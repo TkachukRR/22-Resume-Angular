@@ -10,4 +10,11 @@ export class EducationListComponent {
 
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
+
+  @Input() svgName: string
+  src: string
+
+  ngOnInit(): void {
+    this.src = `./assets/images/${this.svgName}.svg`
+  }
 }

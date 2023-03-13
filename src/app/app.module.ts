@@ -14,6 +14,8 @@ import { LocationComponent } from './components/location/location.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { HobbiesComponent } from './components/hobbies/hobbies.component';
     SkillsComponent,
     HobbiesComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, AngularSvgIconModule.forRoot() ],
   providers: [],
   bootstrap: [AppComponent],
 })

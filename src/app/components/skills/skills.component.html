@@ -1,12 +1,22 @@
-<article *ngFor="let skillSection of info.skills | keyvalue">
-  <h1 class="font-bold">
-    {{ skillSection.value.sectionTitle[pageLanguage] }}
+<article >
+  <h1 class="font-bold flex items-center">
+    <svg-icon
+      class="block mr-1 fill-amber-400"
+      [src]="src"
+      [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
+    </svg-icon>
+    {{ info.sectionTitle[pageLanguage] }}
   </h1>
-  <ul class="py-4 px-6 border rounded mb-2">
+  <ul class="ml-5 mb-2">
     <li
-      class="list-disc"
-      *ngFor="let skill of skillSection.value[pageLanguage]"
+      class="flex items-center"
+      *ngFor="let skill of info[pageLanguage]"
     >
+      <svg-icon
+        class="block ml-[0.25rem] mr-[0.75rem] fill-amber-400"
+        src="./assets/images/circle.svg"
+        [svgStyle] =" { 'width.rem': 0.75, 'height.rem': 0.75 } ">
+      </svg-icon>
       {{
         !skill.hasOwnProperty("language") && !skill.hasOwnProperty("skill")
           ? skill

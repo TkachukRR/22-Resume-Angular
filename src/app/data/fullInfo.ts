@@ -13,6 +13,12 @@ export const fullInfo: MyInfo = Object.freeze({
     ua: 'Ткачук',
   },
 
+  lookingFor: {
+    en: 'Junior Frontend Developer',
+    pl: 'Junior Frontend Developer',
+    ua: 'Junior Frontend розробник',
+  },
+
   dateOfBirh: {
     sectionTitle: {
       en: 'Date of birth:',
@@ -28,15 +34,15 @@ export const fullInfo: MyInfo = Object.freeze({
       pl: 'Lokalizacja:',
       ua: 'Локація:',
     },
-    en: 'Warsaw, before the war - Kharkiv',
-    pl: 'Warszawa, przed wojną – Charków',
-    ua: 'Варшава, до війни - Харків',
+    en: 'Warsaw',
+    pl: 'Warszawa',
+    ua: 'Варшава',
   },
 
   intro: {
-    en: 'Looking for Junior Frontend developer position. I am highly motivated to get new knowledge and put it to use in real projects. I am good team player and prefer to build strong communication via members of a group. Also, I am well-organized and responsible. I am constantly engaged in self-development in programming and improvement of English language skills.',
-    pl: 'Szukam pracy na stanowisku Junior Frontend Developer. Jestem bardzo zmotywowany do zdobywania nowych umiejętności i wykorzystywania ich przy pracy nad projektami. Dobrze odnajduję się w pracy zespołowej i lubię budować silne relacje w grupie współpracowników. Jestem osobą dobrze zorganizowaną i odpowiedzialną. Stale zajmuję się samorozwojem w zakresie programowania i doskonaleniem znajomości języka angielskiego.',
-    ua: 'Шукаю посаду Junior Frontend розробника. Маю велику мотивацію отримувати нові знання та застосовувати їх на реальних проектах. Я хороший командний гравець та віддаю перевагу налагодженню комунікацій всередині команди. Крім того, маю організаційні навички та відповідально ставлюся до виконання задач. Постійно займаюся саморозвитком у програмуванні та вдосконаленням знань англійської мови.',
+    en: 'I am highly motivated to get new knowledge and put it to use in real projects. I am good team player and prefer to build strong communication via members of a group. Also, I am well-organized and responsible. I am constantly engaged in self-development in programming and improvement of English language skills.',
+    pl: 'Jestem bardzo zmotywowany do zdobywania nowych umiejętności i wykorzystywania ich przy pracy nad projektami. Dobrze odnajduję się w pracy zespołowej i lubię budować silne relacje w grupie współpracowników. Jestem osobą dobrze zorganizowaną i odpowiedzialną. Stale zajmuję się samorozwojem w zakresie programowania i doskonaleniem znajomości języka angielskiego.',
+    ua: 'Маю велику мотивацію отримувати нові знання та застосовувати їх на реальних проектах. Я хороший командний гравець та віддаю перевагу налагодженню комунікацій всередині команди. Крім того, маю організаційні навички та відповідально ставлюся до виконання задач. Постійно займаюся саморозвитком у програмуванні та вдосконаленням знань англійської мови.',
   },
 
   subInfo: {
@@ -54,7 +60,7 @@ export const fullInfo: MyInfo = Object.freeze({
     phone: ['+380979501906', '+48662276720'],
     email: 'tkachukrr@gmail.com',
     telegram: 'https://t.me/TkachukRR',
-    linkedIn: 'https://www.linkedin.com/in/roman-tkachuk-2a4337234',
+    linkedIn: 'https://www.linkedin.com/in/TkachukRR',
     gitHub: 'https://github.com/TkachukRR',
   },
 
@@ -66,59 +72,71 @@ export const fullInfo: MyInfo = Object.freeze({
     },
     list: [
       {
-        title: 'Resume v2',
+        title: 'Beer Finder API',
+        link: 'https://tkachukrr.github.io/25-JS-API-Beer-Finder/',
+        urlGit: 'https://github.com/TkachukRR/25-JS-API-Beer-Finder/',
+        stack: ['JavaScript', 'HTML5', 'SCSS', 'BEM', 'Jira', 'Trello'],
+      },
+      // {
+      //   title: 'To Do List',
+      //   link: 'https://tkachukrr.github.io/24-JS-ToDolist/',
+      //   urlGit: 'https://github.com/TkachukRR/24-JS-ToDolist/',
+      //   stack: ['JavaScript', 'HTML5', 'CSS3', 'Jira', 'Trello'],
+      // },
+      {
+        title: 'Resume',
         link: 'https://tkachukrr.github.io/22-Resume-Angular/',
         urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
         stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'Tailwindcss'],
       },
+      // {
+      //   title: 'Angular APP',
+      //   link: 'https://tkachukrr.github.io/23-angular-training-app/',
+      //   urlGit: 'https://github.com/TkachukRR/23-angular-training-app/',
+      //   stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'SCSS'],
+      // },
       {
-        title: 'Angular APP',
-        link: 'https://tkachukrr.github.io/23-angular-training-app/',
-        urlGit: 'https://github.com/TkachukRR/23-angular-training-app/',
-        stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'SCSS'],
-      },
-      {
-        title: 'calculator-js',
+        title: 'Calculator',
         link: 'https://tkachukrr.github.io/Calculator-JS/',
         urlGit: 'https://github.com/TkachukRR/Calculator-JS',
-        stack: ['JavaScript', 'CSS', 'HTML'],
+        stack: ['JavaScript', 'CSS3', 'HTML5'],
       },
       {
-        title: 'exchange',
+        title: 'Exchange',
         link: 'https://tkachukrr.github.io/18-exchange/',
         urlGit: 'https://github.com/TkachukRR/18-exchange',
-        stack: ['JavaScript', 'CSS', 'HTML'],
+        stack: ['JavaScript', 'CSS3', 'HTML5'],
       },
       {
-        title: 'hogwarts',
+        title: 'Hogwarts',
         link: 'https://tkachukrr.github.io/19-hogwarts/',
         urlGit: 'https://github.com/TkachukRR/19-hogwarts',
-        stack: ['JavaScript', 'CSS', 'HTML'],
+        stack: ['JavaScript', 'CSS3', 'HTML5'],
       },
       {
-        title: 'Web-studio',
+        title: 'Web-Studio',
         link: 'https://tkachukrr.github.io/09-web-studio/',
         urlGit: 'https://github.com/TkachukRR/09-web-studio',
-        stack: ['HTML', 'CSS', 'JavaScript'],
+        stack: ['HTML5', 'CSS3', 'JavaScript'],
       },
       {
         title: 'GooDreamShop',
         link: 'https://tkachukrr.github.io/14-GooDreamShop/',
         urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
-        stack: ['HTML', 'CSS', 'JavaScript'],
+        stack: ['HTML5', 'CSS3', 'JavaScript'],
       },
       {
-        title: 'Christmas trees',
+        title: 'Christmas Trees',
         link: 'https://tkachukrr.github.io/06-christmas-trees/',
         urlGit: 'https://github.com/TkachukRR/06-christmas-trees/',
-        stack: ['HTML', 'CSS', 'JavaScript'],
+        stack: ['HTML5', 'CSS3', 'JavaScript'],
       },
-      {
-        title: 'Resume v1',
-        link: 'https://tkachukrr.github.io/00-Resume/',
-        urlGit: 'https://github.com/TkachukRR/00-Resume/',
-        stack: ['HTML', 'CSS', 'JavaScript'],
-      },
+      // {
+      //   title: 'Resume v1',
+      //   link: 'https://tkachukrr.github.io/00-Resume/',
+      //   urlGit: 'https://github.com/TkachukRR/00-Resume/',
+      //   stack: ['HTML', 'CSS', 'JavaScript'],
+      // },
     ],
   },
 
@@ -338,7 +356,7 @@ export const fullInfo: MyInfo = Object.freeze({
         ua: {
           company: 'ТОВ “Екодіс”',
           position: 'Інженер',
-          location: 'Charków',
+          location: 'Харків',
           period: {
             start: '2006-08-01T00:00:00',
             end: '2009-09-01T00:00:00',
@@ -372,6 +390,8 @@ export const fullInfo: MyInfo = Object.freeze({
         'GIT/GitHub',
         'Adobe Photoshop',
         'Responsive/adaptive web design',
+        'Jira',
+        'Trello',
         'CAD KOMPAS 3D',
         'Realtime landscaping Architect',
       ],
@@ -388,6 +408,8 @@ export const fullInfo: MyInfo = Object.freeze({
         'GIT/GitHub',
         'Adobe Photoshop',
         'Responsive/adaptive web design',
+        'Jira',
+        'Trello',
         'CAD KOMPAS 3D',
         'Realtime landscaping Architect',
       ],
@@ -404,6 +426,8 @@ export const fullInfo: MyInfo = Object.freeze({
         'GIT/GitHub',
         'Adobe Photoshop',
         'Responsive/adaptive web design',
+        'Jira',
+        'Trello',
         'CAD KOMPAS 3D',
         'Realtime landscaping Architect',
       ],

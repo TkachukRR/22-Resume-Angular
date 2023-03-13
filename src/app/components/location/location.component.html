@@ -1,2 +1,15 @@
-<h2 class="font-bold">{{ info.location.sectionTitle[pageLanguage] }}</h2>
-<p>{{ info.location[pageLanguage] }}</p>
+<h2 class="font-bold flex items-center mb-2">
+  <svg-icon
+    class="block mr-1 fill-amber-400"
+    src="./assets/images/location-svgrepo-com.svg"
+    [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
+  </svg-icon>
+  {{ info.location.sectionTitle[pageLanguage] }}</h2>
+<p class="ml-5 mb-2 flex items-center">
+  <svg-icon
+    class="block ml-[0.25rem] mr-[0.75rem] fill-amber-400"
+    src="./assets/images/circle.svg"
+    [svgStyle] =" { 'width.rem': 0.75, 'height.rem': 0.75 } ">
+  </svg-icon>
+  {{ info.location[pageLanguage] }}
+</p>

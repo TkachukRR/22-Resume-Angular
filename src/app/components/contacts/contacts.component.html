@@ -1,21 +1,60 @@
-<h2 class="font-bold">{{ info.contacts.sectionTitle[pageLanguage] }}</h2>
-<address class="py-2 px-2 border rounded mb-2">
+<h2 class="font-bold flex items-center mb-2">
+  <svg-icon
+    class="block mr-1 stroke-amber-400"
+    src="./assets/images/contacts-svgrepo-com.svg"
+    [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
+  </svg-icon>
+  {{ info.contacts.sectionTitle[pageLanguage] }}
+</h2>
+<address class="ml-5 mb-2 not-italic">
   <a
-    class="block"
+    class="flex items-center mb-0.5"
     *ngFor="let phone of info.contacts.phone"
     href="tel:{{ phone }}"
-    >{{ phone }}</a
+    >
+    <svg-icon
+      class="block mr-1 fill-amber-400"
+      src="./assets/images/mobile-phone-svgrepo-com.svg"
+      [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
+    </svg-icon>
+    {{ phone }}
+  </a>
+
+  <a class="flex items-center  mb-0.5"
+     href="mailto:{{ info.contacts.email }}"
   >
-  <a class="block" href="mailto:{{ info.contacts.email }}">{{
-    info.contacts.email
-  }}</a>
-  <a class="block" href="{{ info.contacts.telegram }}">{{
-    info.contacts.telegram
-  }}</a>
-  <a class="block" href="{{ info.contacts.linkedIn }}">{{
-    info.contacts.linkedIn
-  }}</a>
-  <a class="block" href="{{ info.contacts.gitHub }}">{{
-    info.contacts.gitHub
-  }}</a>
+    <svg-icon
+      class="block mr-1 stroke-amber-400"
+      src="./assets/images/email-svgrepo-com.svg"
+      [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
+    </svg-icon>
+    {{ info.contacts.email }}
+  </a>
+
+  <a class="flex items-center mb-0.5"
+     href="{{ info.contacts.telegram }}">
+    <svg-icon
+      class="block mr-1 stroke-amber-400"
+      src="./assets/images/telegram-svgrepo-com.svg"
+      [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
+    </svg-icon>
+    {{ info.contacts.telegram | slice:13}}
+  </a>
+
+  <a class="flex items-center mb-0.5"
+     href="{{ info.contacts.linkedIn }}">
+    <svg-icon
+      class="block mr-1 fill-amber-400"
+      src="./assets/images/linkedin-svgrepo-com.svg"
+      [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
+    </svg-icon>
+    {{ info.contacts.linkedIn | slice:28}}</a>
+  <a class="flex items-center mb-0.5"
+     href="{{ info.contacts.gitHub }}">
+    <svg-icon
+      class="block mr-1 stroke-amber-400"
+      src="./assets/images/github-svgrepo-com.svg"
+      [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
+    </svg-icon>
+    {{ info.contacts.gitHub | slice:19}}</a>
 </address>

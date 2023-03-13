@@ -8,4 +8,10 @@ import { MyInfo } from 'src/app/models/myInfo';
 export class WorkListComponent {
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
+  @Input() svgName: string
+  src: string
+
+  ngOnInit(): void {
+    this.src = `./assets/images/${this.svgName}.svg`
+  }
 }

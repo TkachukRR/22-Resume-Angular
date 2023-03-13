@@ -8,5 +8,10 @@ export class ProjectsGalleryComponent {
   @Input() projectList: any;
   @Input() pageLanguage: string;
 
-  ngOnInit(): void {}
+  @Input() svgName: string
+  src: string
+
+  ngOnInit(): void {
+    this.src = `./assets/images/${this.svgName}.svg`
+  }
 }

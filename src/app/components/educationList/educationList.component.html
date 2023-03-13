@@ -1,10 +1,18 @@
-<h2 class="font-bold">{{ info.educations.sectionTitle[pageLanguage] }}</h2>
-<ul class="py-2 px-2 border rounded mb-2">
+<h2
+  class="font-bold mb-3 flex items-center">
+  <svg-icon
+    class="mr-2"
+    [src]="src"
+    [svgStyle] =" { 'width.rem': 2, 'height.rem': 2 } ">
+  </svg-icon>
+  {{ info.educations.sectionTitle[pageLanguage] }}
+</h2>
+<ul class="py-2 px-2 mb-3">
   <li
     *ngFor="let instit of info.educations.institutions"
     class="py-4 px-6 border rounded mb-2 last:mb-0"
   >
-    <h3>{{ instit[pageLanguage].institution }}</h3>
+    <h3 class="font-bold">{{ instit[pageLanguage].institution }}</h3>
     <p>
       {{ instit[pageLanguage].period.start | date : "dd.MM.YYYY" }} -
       {{
@@ -13,7 +21,7 @@
           : "now"
       }}
       |
-      {{ instit[pageLanguage].rank }}
+      <span class="font-bold">{{ instit[pageLanguage].rank }}</span>
     </p>
     <p>{{ instit[pageLanguage].direction }}</p>
   </li>

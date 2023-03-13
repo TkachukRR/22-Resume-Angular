@@ -1,6 +1,13 @@
-<h2 class="font-bold">{{ info.hobbies.sectionTitle[pageLanguage] }}</h2>
-<ul class="py-4 px-6 border rounded mb-2">
-  <li class="list-disc" *ngFor="let hobbi of info.hobbies[pageLanguage]">
-    {{ hobbi }}
+<h2 class="font-bold flex items-center">
+  <svg-icon
+    class="block mr-1 fill-amber-400"
+    [src]="src"
+    [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
+  </svg-icon>
+  {{ info.hobbies.sectionTitle[pageLanguage] }}
+</h2>
+<ul class="py-4 px-6 mb-2 list-disc marker:text-amber-400">
+  <li class="ml-6" *ngFor="let hobby of info.hobbies[pageLanguage]">
+    {{ hobby }}
   </li>
 </ul>

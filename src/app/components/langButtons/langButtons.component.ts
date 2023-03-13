@@ -10,13 +10,17 @@ export class LangButtonsComponent {
   @Output() langBtnValue = new EventEmitter();
 
   @Input() langList: any;
+  src: string;
+  bgUrl: string
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   onLangBtn(btnLangValue: string) {
     this.newLang = btnLangValue;
     this.langBtnValue.emit(this.newLang);
+
   }
 }
