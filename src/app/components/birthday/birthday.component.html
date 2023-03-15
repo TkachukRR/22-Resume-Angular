@@ -1,14 +1,16 @@
-<h2 class="font-bold flex items-center mb-2">
+<h2 class="font-bold flex items-center mb-3">
   <svg-icon
     class="block mr-1 fill-amber-400"
+    [style.fill]="color"
     src="./assets/images/stork-birth-svgrepo-com.svg"
     [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
   </svg-icon>
   {{ info.dateOfBirh.sectionTitle[pageLanguage] }}
 </h2>
-<p class="ml-5 mb-2 flex items-center">
+<p class="pl-5 mb-3 flex items-center">
   <svg-icon
     class="block ml-[0.25rem] mr-[0.75rem] fill-amber-400"
+    [style.fill]="color"
     src="./assets/images/circle.svg"
     [svgStyle] =" { 'width.rem': 0.75, 'height.rem': 0.75 } ">
   </svg-icon>

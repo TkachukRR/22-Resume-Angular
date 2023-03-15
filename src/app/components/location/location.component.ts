@@ -8,4 +8,5 @@ import { MyInfo } from 'src/app/models/myInfo';
 export class LocationComponent {
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
+  @Input() color: string
 }

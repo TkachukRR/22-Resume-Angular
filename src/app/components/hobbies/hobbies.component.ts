@@ -9,7 +9,7 @@ export class HobbiesComponent implements OnInit{
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
   @Input() svgName: string
-
+  @Input() color: string
 
   src: string
 

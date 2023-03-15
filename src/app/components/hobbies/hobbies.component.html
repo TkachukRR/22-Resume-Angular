@@ -1,12 +1,13 @@
 <h2 class="font-bold flex items-center">
   <svg-icon
-    class="block mr-1 fill-amber-400"
+    class="block mr-1"
+    [style.fill]="color"
     [src]="src"
     [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
   </svg-icon>
   {{ info.hobbies.sectionTitle[pageLanguage] }}
 </h2>
-<ul class="py-4 px-6 mb-2 list-disc marker:text-amber-400">
+<ul class="py-4 px-6 mb-2 list-disc marker:text-[{{color}}]" >
   <li class="ml-6" *ngFor="let hobby of info.hobbies[pageLanguage]">
     {{ hobby }}
   </li>

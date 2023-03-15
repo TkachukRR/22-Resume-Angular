@@ -10,6 +10,7 @@ export class LangButtonsComponent {
   @Output() langBtnValue = new EventEmitter();
 
   @Input() langList: any;
+  @Input() color: string;
   src: string;
   bgUrl: string
 

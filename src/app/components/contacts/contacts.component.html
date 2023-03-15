@@ -1,19 +1,21 @@
-<h2 class="font-bold flex items-center mb-2">
+<h2 class="font-bold flex items-center mb-3">
   <svg-icon
-    class="block mr-1 stroke-amber-400"
+    class="block mr-1"
+    [style.stroke]="color"
     src="./assets/images/contacts-svgrepo-com.svg"
     [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
   </svg-icon>
   {{ info.contacts.sectionTitle[pageLanguage] }}
 </h2>
-<address class="ml-5 mb-2 not-italic">
+<address class="pl-5 mb-3 not-italic">
   <a
     class="flex items-center mb-0.5"
     *ngFor="let phone of info.contacts.phone"
     href="tel:{{ phone }}"
     >
     <svg-icon
-      class="block mr-1 fill-amber-400"
+      class="block mr-1"
+      [style.fill]="color"
       src="./assets/images/mobile-phone-svgrepo-com.svg"
       [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
     </svg-icon>
@@ -24,7 +26,8 @@
      href="mailto:{{ info.contacts.email }}"
   >
     <svg-icon
-      class="block mr-1 stroke-amber-400"
+      class="block mr-1"
+      [style.stroke]="color"
       src="./assets/images/email-svgrepo-com.svg"
       [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
     </svg-icon>
@@ -34,7 +37,8 @@
   <a class="flex items-center mb-0.5"
      href="{{ info.contacts.telegram }}">
     <svg-icon
-      class="block mr-1 stroke-amber-400"
+      class="block mr-1"
+      [style.stroke]="color"
       src="./assets/images/telegram-svgrepo-com.svg"
       [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
     </svg-icon>
@@ -44,7 +48,8 @@
   <a class="flex items-center mb-0.5"
      href="{{ info.contacts.linkedIn }}">
     <svg-icon
-      class="block mr-1 fill-amber-400"
+      class="block mr-1"
+      [style.fill]="color"
       src="./assets/images/linkedin-svgrepo-com.svg"
       [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
     </svg-icon>
@@ -52,7 +57,8 @@
   <a class="flex items-center mb-0.5"
      href="{{ info.contacts.gitHub }}">
     <svg-icon
-      class="block mr-1 stroke-amber-400"
+      class="block mr-1"
+      [style.stroke]="color"
       src="./assets/images/github-svgrepo-com.svg"
       [svgStyle] =" { 'width.rem': 1.25, 'height.rem': 1.25 } ">
     </svg-icon>

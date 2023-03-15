@@ -15,33 +15,34 @@
     *ngFor="let project of projectList.projects.list"
   >
     <h3 class="mb-3 font-bold text-center">{{ project.title}}</h3>
-    <ul class="flex justify-center mb-2">
-      <li *ngFor="let technology of project.stack" class="m-0.5">
-        <svg-icon
-          class="block border rounded border-amber-400 p-1"
-          src="./assets/images/{{technology | lowercase}}.svg"
-          [svgStyle] =" { 'width.rem': 2.25, 'height.rem': 2.25 } ">
-        </svg-icon>
+    <ul class="flex flex-wrap mb-2 leading-3 gap-1 justify-center ">
+      <li *ngFor="let technology of project.stack" class="">
+<!--        <svg-icon-->
+<!--          class="block border rounded border-amber-400 p-1"-->
+<!--          src="./assets/images/{{technology | lowercase}}.svg"-->
+<!--          [svgStyle] =" { 'width.rem': 2.25, 'height.rem': 2.25 } ">-->
+<!--        </svg-icon>-->
+        <small class="text-xs leading-3">{{technology}}</small>
       </li>
     </ul>
     <!-- <iframe [src]="project.link"></iframe> -->
 
     <ul class="flex justify-around">
       <li>
-        <a [href]="project.link" class="inline-block bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <a [href]="project['link']" class="w-32 h-8 flex items-center justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0.5 px-4 border border-gray-400 rounded shadow">
           <svg-icon
             class="block"
             src="./assets/images/www.svg"
-            [svgStyle] =" { 'width.rem': 5, 'height.rem': 2 } ">
+            [svgStyle] =" { 'width.rem': 2, 'height.rem': 1.5 } ">
           </svg-icon>
         </a>
       </li>
       <li>
-        <a [href]="project.urlGit" class="inline-block bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+        <a [href]="project['urlGit']" class="w-32 h-8 flex items-center justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0.5 px-4 border border-gray-400 rounded shadow">
           <svg-icon
             class="block"
             src="./assets/images/gith.svg"
-            [svgStyle] =" { 'width.rem': 6, 'height.rem': 2 } ">
+            [svgStyle] =" { 'width.rem': 3, 'height.rem': 1.5 } ">
           </svg-icon>
         </a>
       </li>

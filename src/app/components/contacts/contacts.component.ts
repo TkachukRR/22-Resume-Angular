@@ -8,4 +8,5 @@ import { MyInfo } from 'src/app/models/myInfo';
 export class ContactsComponent {
   @Input() info: MyInfo;
   @Input() pageLanguage: string;
+  @Input() color: string
 }

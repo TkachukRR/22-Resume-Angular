@@ -72,6 +72,12 @@ export const fullInfo: MyInfo = Object.freeze({
     },
     list: [
       {
+        title: 'Blog',
+        link: 'https://angular-blog-ee97f.firebaseapp.com/',
+        urlGit: 'https://github.com/TkachukRR/27-angular-blog',
+        stack: ['Angular','TypeScript', 'HTML5', 'SCSS', 'Jira', 'Git', 'DB', 'WPA'],
+      },
+      {
         title: 'Beer Finder API',
         link: 'https://tkachukrr.github.io/25-JS-API-Beer-Finder/',
         urlGit: 'https://github.com/TkachukRR/25-JS-API-Beer-Finder/',
@@ -87,7 +93,7 @@ export const fullInfo: MyInfo = Object.freeze({
         title: 'Resume',
         link: 'https://tkachukrr.github.io/22-Resume-Angular/',
         urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
-        stack: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'Tailwindcss'],
+        stack: ['Angular', 'TypeScript', 'HTML5', 'Tailwindcss'],
       },
       // {
       //   title: 'Angular APP',
@@ -387,13 +393,15 @@ export const fullInfo: MyInfo = Object.freeze({
         'ReactJS',
         'OOP/SOLID',
         'Figma',
-        'GIT/GitHub',
+        'GIT/GitHub/Git-flow',
         'Adobe Photoshop',
         'Responsive/adaptive web design',
         'Jira',
         'Trello',
+        'Tailwindcss',
+        'Firebase',
         'CAD KOMPAS 3D',
-        'Realtime landscaping Architect',
+        'Realtime Landscaping Architect',
       ],
       pl: [
         'HTML5',

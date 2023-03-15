@@ -1,20 +1,22 @@
 <article >
-  <h1 class="font-bold flex items-center">
+  <h1 class="font-bold flex items-center mb-3">
     <svg-icon
-      class="block mr-1 fill-amber-400"
+      class="block mr-1"
+      [style.fill]="color"
       [src]="src"
       [svgStyle] =" { 'width.rem': 2.5, 'height.rem': 2.5 } ">
     </svg-icon>
     {{ info.sectionTitle[pageLanguage] }}
   </h1>
-  <ul class="ml-5 mb-2">
+  <ul class="pl-5 mb-3">
     <li
       class="flex items-center"
       *ngFor="let skill of info[pageLanguage]"
     >
       <svg-icon
-        class="block ml-[0.25rem] mr-[0.75rem] fill-amber-400"
+        class="block ml-[0.25rem] mr-[0.75rem]"
         src="./assets/images/circle.svg"
+        [style.fill]="color"
         [svgStyle] =" { 'width.rem': 0.75, 'height.rem': 0.75 } ">
       </svg-icon>
       {{

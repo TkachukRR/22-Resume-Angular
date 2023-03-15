@@ -1,7 +1,9 @@
 <div
   class="max-w-screen-lg container mx-auto my-5 flex flex-row-reverse text-xl shadow-2xl"
 >
-  <main class="basis-8/12 p-3 border-[24px] border-l-0 border-amber-400">
+  <main
+    class="basis-8/12 p-3 border-[24px] border-l-0"
+    [style.border-color]="decorColor">
 
     <app-introduce
       [info]="fullInfo"
@@ -12,13 +14,14 @@
       [projectList]="fullInfo"
       [pageLanguage]="pageLang"
       svgName="projects"
-    ></app-projectsGallery>
+      [color]="decorColor">
+    </app-projectsGallery>
 
     <app-educationList
       [info]="fullInfo"
       [pageLanguage]="pageLang"
-      svgName="education"
-    ></app-educationList>
+      svgName="education">
+    </app-educationList>
 
     <app-workList
       [info]="fullInfo"
@@ -28,56 +31,66 @@
   </main>
 
   <aside class="basis-4/12 p-3 bg-zinc-800 text-zinc-100">
+    <app-langButtons
+      (langBtnValue)="onLangBtnClick($event)"
+      [langList]="languages"
+      [color]="decorColor">
+    </app-langButtons>
+
     <img
-      class="block w-64 mb-3 mx-auto pt-14"
+      class="block w-64 mb-5 mx-auto mt-8"
       src="./assets/images/profile.png"
       alt="{{ fullInfo.firstName.en }} {{ fullInfo.lastName.en }}"
     />
 
-    <app-langButtons
-      (langBtnValue)="onLangBtnClick($event)"
-      [langList]="languages"
-    ></app-langButtons>
+
 
     <app-birthday
       class="block mb-3"
       [info]="fullInfo"
       [pageLanguage]="pageLang"
-    ></app-birthday>
+      [color]="decorColor">
+    </app-birthday>
 
     <app-location
       class="block mb-3"
       [info]="fullInfo"
       [pageLanguage]="pageLang"
-    ></app-location>
+      [color]="decorColor">
+    </app-location>
 
     <app-contacts
       [info]="fullInfo"
-      [pageLanguage]="pageLang">
+      [pageLanguage]="pageLang"
+      [color]="decorColor">
     </app-contacts>
 
     <app-skills
       [info]="fullInfo.skills.tech"
       [pageLanguage]="pageLang"
-      svgName="skill-tech">
+      svgName="skill-tech"
+      [color]="decorColor">
     </app-skills>
 
     <app-skills
       [info]="fullInfo.skills.languages"
       [pageLanguage]="pageLang"
-      svgName="skill-lang">
+      svgName="skill-lang"
+      [color]="decorColor">
     </app-skills>
 
     <app-skills
       [info]="fullInfo.skills.soft"
       [pageLanguage]="pageLang"
-      svgName="skill-soft">
+      svgName="skill-soft"
+      [color]="decorColor">
     </app-skills>
 
-    <app-hobbies
-      [info]="fullInfo"
+    <app-skills
+      [info]="fullInfo.hobbies"
       [pageLanguage]="pageLang"
-      svgName="hobbies">
-    </app-hobbies>
+      svgName="hobbies"
+      [color]="decorColor">
+    </app-skills>
   </aside>
 </div>

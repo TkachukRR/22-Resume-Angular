@@ -9,6 +9,7 @@ export class ProjectsGalleryComponent {
   @Input() pageLanguage: string;
 
   @Input() svgName: string
+  @Input() color: string
   src: string
 
   ngOnInit(): void {

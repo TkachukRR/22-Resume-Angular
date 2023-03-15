@@ -8,6 +8,7 @@ export class SkillsComponent implements OnInit{
   @Input() info: any
   @Input() pageLanguage: string;
   @Input() svgName: string
+  @Input() color: string
   src: string
 
   ngOnInit(): void {
