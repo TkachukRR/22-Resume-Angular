@@ -19,7 +19,7 @@ export const fullInfo: MyInfo = Object.freeze({
     ua: 'Junior Frontend розробник',
   },
 
-  dateOfBirh: {
+  dateOfBirth: {
     sectionTitle: {
       en: 'Date of birth:',
       pl: 'Data urodzenia:',
@@ -46,9 +46,9 @@ export const fullInfo: MyInfo = Object.freeze({
   },
 
   subInfo: {
-    en: 'I am considering work in all cities and I am ready to move.',
-    pl: 'Rozważam pracę we wszystkich miastach i jestem gotowy do przeprowadzki.',
-    ua: 'Розглядаю роботу в усіх містах і готовий до переїзду.',
+    en: 'I am ready to relocate.',
+    pl: 'Jestem gotowy do przeprowadzki.',
+    ua: 'Готовий до переїзду в інше місто.',
   },
 
   contacts: {
@@ -93,7 +93,7 @@ export const fullInfo: MyInfo = Object.freeze({
         title: 'Resume',
         link: 'https://tkachukrr.github.io/22-Resume-Angular/',
         urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
-        stack: ['Angular', 'TypeScript', 'HTML5', 'Tailwindcss'],
+        stack: ['Angular', 'HTML5', 'Tailwindcss'],
       },
       // {
       //   title: 'Angular APP',
@@ -125,12 +125,12 @@ export const fullInfo: MyInfo = Object.freeze({
         urlGit: 'https://github.com/TkachukRR/09-web-studio',
         stack: ['HTML5', 'CSS3', 'JavaScript'],
       },
-      {
-        title: 'GooDreamShop',
-        link: 'https://tkachukrr.github.io/14-GooDreamShop/',
-        urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
-        stack: ['HTML5', 'CSS3', 'JavaScript'],
-      },
+      // {
+      //   title: 'GooDreamShop',
+      //   link: 'https://tkachukrr.github.io/14-GooDreamShop/',
+      //   urlGit: 'https://github.com/TkachukRR/14-GooDreamShop/',
+      //   stack: ['HTML5', 'CSS3', 'JavaScript'],
+      // },
       {
         title: 'Christmas Trees',
         link: 'https://tkachukrr.github.io/06-christmas-trees/',
@@ -239,6 +239,35 @@ export const fullInfo: MyInfo = Object.freeze({
           period: {
             start: '2021-11-01T00:00:00',
             end: '2022-09-31T00:00:00',
+          },
+        },
+      },
+      {
+        en: {
+          institution: '"GoIT" -  innovative IT courses',
+          rank: 'Developer',
+          direction: 'HTML, SCC english course',
+          period: {
+            start: '2021-10-01T00:00:00',
+            end: '2022-10-31T00:00:00',
+          },
+        },
+        pl: {
+          institution: '"GoIT" - innowacyjne kursy IT',
+          rank: 'Developer',
+          direction: 'HTML, SCC english course',
+          period: {
+            start: '2021-10-01T00:00:00',
+            end: '2022-10-31T00:00:00',
+          },
+        },
+        ua: {
+          institution: '"GoIT" - платформа IT-курсів',
+          rank: 'Розробник',
+          direction: 'HTML, SCC english course',
+          period: {
+            start: '2021-10-01T00:00:00',
+            end: '2022-10-31T00:00:00',
           },
         },
       },

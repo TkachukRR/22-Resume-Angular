@@ -17,7 +17,7 @@ export interface MyInfo {
     ua: string;
   };
 
-  dateOfBirh: {
+  dateOfBirth: {
     sectionTitle: {
       en: string;
       pl: string;

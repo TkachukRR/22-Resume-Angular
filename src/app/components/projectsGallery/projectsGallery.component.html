@@ -1,5 +1,5 @@
 <h2
-  class="font-bold  mb-3 flex items-center">
+  class="font-bold  mb-3 flex items-center ">
   <svg-icon
     class="mr-2"
     [src]="src"
@@ -14,17 +14,20 @@
     class="py-2 px-4 border rounded overflow-hidden"
     *ngFor="let project of projectList.projects.list"
   >
-    <h3 class="mb-3 font-bold text-center">{{ project.title}}</h3>
-    <ul class="flex flex-wrap mb-2 leading-3 gap-1 justify-center ">
-      <li *ngFor="let technology of project.stack" class="">
-<!--        <svg-icon-->
-<!--          class="block border rounded border-amber-400 p-1"-->
-<!--          src="./assets/images/{{technology | lowercase}}.svg"-->
-<!--          [svgStyle] =" { 'width.rem': 2.25, 'height.rem': 2.25 } ">-->
-<!--        </svg-icon>-->
-        <small class="text-xs leading-3">{{technology}}</small>
-      </li>
-    </ul>
+    <h3 class="mb-3 font-bold text-center bg-[{{color}}]">{{ project.title}}</h3>
+    <div class="flex gap-3">
+      <h4 class="text-sm font-semibold">Stack:</h4>
+      <ul class="flex flex-wrap mb-2 leading-3 gap-1 justify-center ">
+        <li *ngFor="let technology of project.stack" class="after:content-[','] last:after:content-[''] self-center">
+  <!--        <svg-icon-->
+  <!--          class="block border rounded border-amber-400 p-1"-->
+  <!--          src="./assets/images/{{technology | lowercase}}.svg"-->
+  <!--          [svgStyle] =" { 'width.rem': 2.25, 'height.rem': 2.25 } ">-->
+  <!--        </svg-icon>-->
+          <small class="text-sm leading-3">{{technology}}</small>
+        </li>
+      </ul>
+    </div>
     <!-- <iframe [src]="project.link"></iframe> -->
 
     <ul class="flex justify-around">

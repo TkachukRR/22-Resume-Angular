@@ -13,7 +13,7 @@ export class AppComponent {
   languages = Object.keys(data.firstName);
   pageLang = Object.keys(data.firstName)[0];
 
-  decorColor = '#A5D6A5'
+  decorColor = '#C8C864'
 
   onLangBtnClick(lang: string) {
     this.pageLang = lang;
