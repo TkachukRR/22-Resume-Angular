@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from "./app.component";
+import { CvPageComponent } from "./components/cv-page/cv-page.component";
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
-  {path: 'en', redirectTo: '/'},
-  {path: 'pl', redirectTo: '/'},
-  {path: 'ua', redirectTo: '/'},
+  {path: '', component: CvPageComponent},
+  {path: ':lang', component: CvPageComponent},
 ];
 
 @NgModule({

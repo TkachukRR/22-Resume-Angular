@@ -22,6 +22,5 @@ export class LangButtonsComponent {
   onLangBtn(btnLangValue: string) {
     this.newLang = btnLangValue;
     this.langBtnValue.emit(this.newLang);
-
   }
 }

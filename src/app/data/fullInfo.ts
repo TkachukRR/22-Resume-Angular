@@ -72,10 +72,10 @@ export const fullInfo: MyInfo = Object.freeze({
     },
     list: [
       {
-        title: 'Blog',
-        link: 'https://angular-blog-ee97f.firebaseapp.com/',
-        urlGit: 'https://github.com/TkachukRR/27-angular-blog',
-        stack: ['Angular','TypeScript', 'HTML5', 'SCSS', 'Jira', 'Git', 'DB', 'WPA'],
+        title: 'Web-Studio',
+        link: 'https://tkachukrr.github.io/09-web-studio/',
+        urlGit: 'https://github.com/TkachukRR/09-web-studio',
+        stack: ['HTML5', 'CSS3', 'JavaScript'],
       },
       {
         title: 'Beer Finder API',
@@ -90,10 +90,10 @@ export const fullInfo: MyInfo = Object.freeze({
       //   stack: ['JavaScript', 'HTML5', 'CSS3', 'Jira', 'Trello'],
       // },
       {
-        title: 'Resume',
-        link: 'https://tkachukrr.github.io/22-Resume-Angular/',
-        urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
-        stack: ['Angular', 'HTML5', 'Tailwindcss'],
+        title: 'Hogwarts',
+        link: 'https://tkachukrr.github.io/19-hogwarts/',
+        urlGit: 'https://github.com/TkachukRR/19-hogwarts',
+        stack: ['JavaScript', 'CSS3', 'HTML5'],
       },
       // {
       //   title: 'Angular APP',
@@ -114,16 +114,16 @@ export const fullInfo: MyInfo = Object.freeze({
         stack: ['JavaScript', 'CSS3', 'HTML5'],
       },
       {
-        title: 'Hogwarts',
-        link: 'https://tkachukrr.github.io/19-hogwarts/',
-        urlGit: 'https://github.com/TkachukRR/19-hogwarts',
-        stack: ['JavaScript', 'CSS3', 'HTML5'],
+        title: 'Resume',
+        link: 'https://tkachukrr.github.io/22-Resume-Angular/',
+        urlGit: 'https://github.com/TkachukRR/22-Resume-Angular/',
+        stack: ['Angular', 'HTML5', 'Tailwindcss'],
       },
       {
-        title: 'Web-Studio',
-        link: 'https://tkachukrr.github.io/09-web-studio/',
-        urlGit: 'https://github.com/TkachukRR/09-web-studio',
-        stack: ['HTML5', 'CSS3', 'JavaScript'],
+        title: 'Blog',
+        link: 'https://angular-blog-ee97f.firebaseapp.com/',
+        urlGit: 'https://github.com/TkachukRR/27-angular-blog',
+        stack: ['Angular','TypeScript', 'HTML5', 'SCSS', 'Jira', 'Git', 'DB', 'WPA'],
       },
       // {
       //   title: 'GooDreamShop',

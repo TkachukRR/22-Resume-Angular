@@ -16,6 +16,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { HobbiesComponent } from './components/hobbies/hobbies.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { CvPageComponent } from './components/cv-page/cv-page.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     ContactsComponent,
     SkillsComponent,
     HobbiesComponent,
+    CvPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, AngularSvgIconModule.forRoot() ],
   providers: [],
