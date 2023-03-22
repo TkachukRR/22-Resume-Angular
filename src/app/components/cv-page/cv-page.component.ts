@@ -13,13 +13,14 @@ export class CvPageComponent implements OnInit{
 }
 
   fullInfo: MyInfo = data;
-  pageLang: string = ''
+  pageLang: string = 'en'
   decorColor = '#7F9F04'
 
   public ngOnInit() {
     this.route.params.subscribe( (params:Params) => {
-      console.log(params.lang)
-      this.pageLang = params.lang
+      if (params.lang) {
+        this.pageLang = params.lang
+      }
     })
   }
 }

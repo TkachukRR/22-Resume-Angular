@@ -1,10 +1,10 @@
+<div class="w-4/12 absolute top-8">
+  <app-langButtons
+    (langBtnValue)="onLangBtnClick($event)"
+    [langList]="languages"
+    [color]="decorColor">
+  </app-langButtons>
+</div>
 
-
-<app-langButtons
-  class="w-16"
-  (langBtnValue)="onLangBtnClick($event)"
-  [langList]="languages"
-  [color]="decorColor">
-</app-langButtons>
 <router-outlet></router-outlet>
 
