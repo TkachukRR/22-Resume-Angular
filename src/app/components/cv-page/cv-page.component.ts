@@ -9,8 +9,7 @@ import { fullInfo as data } from "../../data/fullInfo";
   styleUrls: ['./cv-page.component.scss']
 })
 export class CvPageComponent implements OnInit{
-  constructor(private route: ActivatedRoute,
-              private router: Router
+  constructor(private route: ActivatedRoute
   ) {
 }
 
@@ -22,8 +21,6 @@ export class CvPageComponent implements OnInit{
     this.route.params.subscribe( (params:Params) => {
       if (params.lang) {
         this.pageLang = params.lang
-      } else {
-        this.pageLang = this.router.url.replace('/','')
       }
     })
   }
