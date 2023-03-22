@@ -1,10 +1,15 @@
-<div class="w-4/12 absolute top-8">
+<div class="max-w-{1380px} container mx-auto relative">
+
+  <div class="absolute w-4/12 top-0">
   <app-langButtons
     (langBtnValue)="onLangBtnClick($event)"
     [langList]="languages"
     [color]="decorColor">
   </app-langButtons>
+
+  </div>
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+
 
