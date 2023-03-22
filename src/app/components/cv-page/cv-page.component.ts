@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from "@angular/router";
+import { ActivatedRoute, Params, Router } from "@angular/router";
 import { MyInfo } from "../../models/myInfo";
 import { fullInfo as data } from "../../data/fullInfo";
 
@@ -9,7 +9,9 @@ import { fullInfo as data } from "../../data/fullInfo";
   styleUrls: ['./cv-page.component.scss']
 })
 export class CvPageComponent implements OnInit{
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+              private router: Router
+  ) {
 }
 
   fullInfo: MyInfo = data;
@@ -20,6 +22,8 @@ export class CvPageComponent implements OnInit{
     this.route.params.subscribe( (params:Params) => {
       if (params.lang) {
         this.pageLang = params.lang
+      } else {
+        this.pageLang = this.router.url.replace('/','')
       }
     })
   }

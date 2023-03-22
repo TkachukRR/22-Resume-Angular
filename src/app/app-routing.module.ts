@@ -5,6 +5,9 @@ import { CvPageComponent } from "./components/cv-page/cv-page.component";
 
 const routes: Routes = [
   {path: '', component: CvPageComponent},
+  {path: 'pl', component: CvPageComponent},
+  {path: 'ua', component: CvPageComponent},
+  {path: 'en', component: CvPageComponent},
   {path: ':lang', component: CvPageComponent},
 ];
 
