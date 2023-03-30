@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: rgb(39 39 42);
+
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+}
+
+h3 {
+  margin: 12px 0;
+}
+
+h4 {
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 16px auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main {
+  flex-basis: calc((8 / 12) * 100%);
+
+  padding: 12px;
+
+  border: 24px solid #7f9f04;
+  border-left-width: 0px;
+}
+.aside {
+  flex-basis: calc((4 / 12) * 100%);
+}
+/* ------------------------------------------ */
+.introduce {
+  padding: 16px 24px;
+  margin-bottom: 8px;
+}
+.introduce__name {
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+
+  margin-bottom: 8px;
+}
+.introduce__position {
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  margin-bottom: 32px;
+}
+.introduce__intro {
+  margin-bottom: 4px;
+}
+.introduce__subinfo {
+}
+/* ------------------------------------------ */
+
+.projects {
+}
+.projects__title {
+}
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  place-content: stretch;
+
+  gap: 8px;
+  padding: 8px;
+}
+
+.projects__item {
+  padding: 8px 16px;
+
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 16px;
+}
+/* ------------------------------------------ */
+
+.project__title {
+  text-align: center;
+
+  font-weight: 700;
+
+  background-color: #7f9f04;
+}
+.project__technology {
+  display: flex;
+  gap: 12px;
+}
+.project__tech {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.project__stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  line-height: 0.75rem;
+
+  margin-bottom: 8px;
+}
+
+.project__buttons {
+}
+.project__link {
+}
