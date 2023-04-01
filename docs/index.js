@@ -67,12 +67,22 @@ function makeEducationItemsMarkup() {
   let institutionItemsMarkup = "";
 
   info.educations.institutions.map((institution) => {
+    const dateStart = new Date(institution[pageLang].period.start);
+    const dateEnd = new Date(institution[pageLang].period.end);
+    const options = {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    };
+
     institutionItemsMarkup += `
     <li class="educations__item institution">
       <h4 class="institution__title">${institution[pageLang].institution}</h4>
       <p class="institution__period">
-        ${institution[pageLang].period.start} - ${
-      institution[pageLang].period.end || "now"
+        ${dateStart.toLocaleDateString(undefined, options)} - ${
+      dateEnd.toLocaleDateString(undefined, options) === "Invalid Date"
+        ? "now"
+        : dateEnd.toLocaleDateString(undefined, options)
     } | 
         <span class="institution__rank">${institution[pageLang].rank}</span>
       </p>
@@ -106,13 +116,24 @@ function makeCompanyItemsMarkup() {
       })
       .join("");
 
+    const dateStart = new Date(company[pageLang].period.start);
+    const dateEnd = new Date(company[pageLang].period.end);
+    const options = {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    };
+
     companyItemsMarkup += `
     <li class="works__item company">
       <h4 class="company_title">${company[pageLang].company}</h4>
       <p class="company__period">
-        ${company[pageLang].period.start} - ${
-      company[pageLang].period.end || "now"
-    } | 
+    ${dateStart.toLocaleDateString(undefined, options)} - ${
+      dateEnd.toLocaleDateString(undefined, options) === "Invalid Date"
+        ? "now"
+        : dateEnd.toLocaleDateString(undefined, options)
+    }
+    | 
         <span class="company__position">${company[pageLang].position}</span>
       </p>
       <ul class="company__responsibilities">${responsibilities}</ul>
@@ -150,6 +171,12 @@ function makeLangButtonsMarkup() {
 document.querySelector(".lang__buttons").innerHTML = makeLangButtonsMarkup();
 
 // ==========================================
+const birthday = new Date(info.dateOfBirth.date);
+const options = {
+  day: "numeric",
+  month: "numeric",
+  year: "numeric",
+};
 
 document.querySelector(
   ".birthday__title"
@@ -157,7 +184,7 @@ document.querySelector(
 
 document.querySelector(
   ".birthday__date"
-).textContent = `${info.dateOfBirth.date}`;
+).textContent = `${birthday.toLocaleDateString(undefined, options)}`;
 
 // ==========================================
 document.querySelector(

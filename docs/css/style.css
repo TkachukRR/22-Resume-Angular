@@ -6,9 +6,11 @@
   padding: 0;
 }
 
-a {
+a,
+a:visited {
   cursor: pointer;
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -33,6 +35,7 @@ h3 {
 }
 
 h4 {
+  margin: 12px 0;
 }
 
 .wrapper {
@@ -55,6 +58,11 @@ h4 {
 }
 .aside {
   flex-basis: calc((4 / 12) * 100%);
+
+  padding: 12px;
+
+  color: #f4f4f5;
+  background-color: #27272a;
 }
 /* ------------------------------------------ */
 .introduce {
@@ -137,3 +145,5 @@ h4 {
 }
 .project__link {
 }
+
+/* ------------------------------------------ */
