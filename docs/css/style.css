@@ -197,6 +197,7 @@ h4 {
 .location,
 .contacts,
 .skills,
+.tech,
 .lang,
 .soft,
 .hobbies {
@@ -254,3 +255,35 @@ h4 {
 .company__responsibilities li::marker {
   color: #7f9f04;
 }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+h3 > .icon {
+  height: 24px;
+  width: 24px;
+}
+
+h4 > .icon {
+  height: 24px;
+  width: 24px;
+  color: #7f9f04;
+}
+
+address > a > .icon {
+  color: #7f9f04;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */

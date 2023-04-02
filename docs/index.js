@@ -20,9 +20,9 @@ document.querySelector(
 ).textContent = `${info.subInfo[pageLang]}`;
 
 // ==========================================
-document.querySelector(
-  ".projects__title"
-).textContent = `${info.projects.sectionTitle[pageLang]}`;
+document.querySelector(".projects__title").innerHTML = `
+  ${svgIconMarkup("projects")}
+  ${info.projects.sectionTitle[pageLang]}`;
 
 function makeProjectItemsMarkup() {
   let projectItemsMarkup = "";
@@ -59,9 +59,9 @@ document.querySelector(".projects__list").innerHTML = makeProjectItemsMarkup();
 
 // ==========================================
 
-document.querySelector(
-  ".educations__title"
-).textContent = `${info.educations.sectionTitle[pageLang]}`;
+document.querySelector(".educations__title").innerHTML = `
+  ${svgIconMarkup("education")}
+  ${info.educations.sectionTitle[pageLang]}`;
 
 function makeEducationItemsMarkup() {
   let institutionItemsMarkup = "";
@@ -100,9 +100,9 @@ document.querySelector(".educations__list").innerHTML =
 
 // ==========================================
 
-document.querySelector(
-  ".works__title"
-).textContent = `${info.works.sectionTitle[pageLang]}`;
+document.querySelector(".works__title").innerHTML = `
+  ${svgIconMarkup("work")}
+  ${info.works.sectionTitle[pageLang]}`;
 
 function makeCompanyItemsMarkup() {
   let companyItemsMarkup = "";
@@ -178,28 +178,31 @@ const options = {
   year: "numeric",
 };
 
-document.querySelector(
-  ".birthday__title"
-).textContent = `${info.dateOfBirth.sectionTitle[pageLang]}`;
+document.querySelector(".birthday__title").innerHTML = `
+  ${svgIconMarkup("birth")}
+  ${info.dateOfBirth.sectionTitle[pageLang]}
+  `;
 
 document.querySelector(
   ".birthday__date"
-).textContent = `${birthday.toLocaleDateString(undefined, options)}`;
+).innerHTML = `<li>${birthday.toLocaleDateString(undefined, options)}</li>`;
 
 // ==========================================
-document.querySelector(
-  ".location__title"
-).textContent = `${info.location.sectionTitle[pageLang]}`;
+document.querySelector(".location__title").innerHTML = `
+${svgIconMarkup("location")}
+${info.location.sectionTitle[pageLang]}
+`;
 
 document.querySelector(
   ".location__place"
-).textContent = `${info.location[pageLang]}`;
+).innerHTML = `<li>${info.location[pageLang]}</li>`;
 
 // ==========================================
 
-document.querySelector(
-  ".contacts__title"
-).textContent = `${info.contacts.sectionTitle[pageLang]}`;
+document.querySelector(".contacts__title").innerHTML = `
+${svgIconMarkup("contacts")}
+${info.contacts.sectionTitle[pageLang]}
+`;
 
 function makeContactsMarkup() {
   const contactsTypes = Object.keys(info.contacts.contacts);
@@ -214,6 +217,7 @@ function makeContactsMarkup() {
           .map((phone) => {
             return `
               <a href="${"tel:" + phone}">
+                ${svgIconMarkup("phone")}
                 ${phone}
               </a>
             `;
@@ -223,17 +227,21 @@ function makeContactsMarkup() {
         return phonesMarkup;
       }
 
-      if (typeof info.contacts.contacts[contactType] !== "object") {
+      if (contactType === "email") {
         return `
-      <a href="${
-        contactType === "email"
-          ? "email:" + info.contacts.contacts[contactType]
-          : info.contacts.contacts[contactType]
-      }">
-        ${info.contacts.contacts[contactType]}
-      </a>
-    `;
+          <a href="${"email:" + info.contacts.contacts[contactType]}">
+            ${svgIconMarkup("email")}
+            ${info.contacts.contacts[contactType]}
+          </a>
+        `;
       }
+
+      return `
+          <a href="${info.contacts.contacts[contactType]}">
+            ${svgIconMarkup(contactType)}
+            ${info.contacts.contacts[contactType]}
+          </a>
+        `;
     })
     .join("");
 
@@ -244,27 +252,28 @@ document.querySelector(".contacts__address").innerHTML = makeContactsMarkup();
 
 // ==========================================
 
-document.querySelector(
-  ".tech__title"
-).textContent = `${info.skills.tech.sectionTitle[pageLang]}`;
+document.querySelector(".tech__title").innerHTML = `
+${svgIconMarkup("skill-tech")}
+${info.skills.tech.sectionTitle[pageLang]}
+`;
 
 document.querySelector(".tech__skills").innerHTML =
   makeSkillsListMarkup("tech");
 
 // ==========================================
 
-document.querySelector(
-  ".lang__title"
-).textContent = `${info.skills.lang.sectionTitle[pageLang]}`;
+document.querySelector(".lang__title").innerHTML = `
+${svgIconMarkup("skill-lang")}
+${info.skills.lang.sectionTitle[pageLang]}`;
 
 document.querySelector(".lang__skills").innerHTML =
   makeSkillsListMarkup("lang");
 
 // ==========================================
 
-document.querySelector(
-  ".soft__title"
-).textContent = `${info.skills.soft.sectionTitle[pageLang]}`;
+document.querySelector(".soft__title").innerHTML = `
+${svgIconMarkup("skill-soft")}
+${info.skills.soft.sectionTitle[pageLang]}`;
 
 document.querySelector(".soft__skills").innerHTML =
   makeSkillsListMarkup("soft");
@@ -291,9 +300,9 @@ function makeSkillsListMarkup(skill) {
 
 // ==========================================
 
-document.querySelector(
-  ".hobbies__title"
-).textContent = `${info.hobbies.sectionTitle[pageLang]}`;
+document.querySelector(".hobbies__title").innerHTML = `
+  ${svgIconMarkup("hobbies")}
+  ${info.hobbies.sectionTitle[pageLang]}`;
 
 document.querySelector(".hobbies__list").innerHTML = makeHobbiesMarkup("soft");
 
@@ -310,3 +319,11 @@ function makeHobbiesMarkup() {
 }
 
 // ==========================================
+
+function svgIconMarkup(id) {
+  return `
+    <svg class="icon icon-${id}">
+      <use xlink:href="#icon-${id}"></use>
+    </svg>
+  `;
+}
