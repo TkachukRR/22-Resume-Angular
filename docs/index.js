@@ -126,7 +126,7 @@ function makeCompanyItemsMarkup() {
 
     companyItemsMarkup += `
     <li class="works__item company">
-      <h4 class="company_title">${company[pageLang].company}</h4>
+      <h4 class="company__title">${company[pageLang].company}</h4>
       <p class="company__period">
     ${dateStart.toLocaleDateString(undefined, options)} - ${
       dateEnd.toLocaleDateString(undefined, options) === "Invalid Date"
@@ -155,12 +155,12 @@ function makeLangButtonsMarkup() {
       if (lang === "en") {
         return `
         <li class="language__item btn">
-          <a href="index.html">${lang}</a> 
+          <a class="language__link" href="index.html">${lang}</a> 
         </li>`;
       }
       return `
         <li class="language__item btn">
-          <a href="index_${lang}.html">${lang}</a> 
+          <a class="language__link" href="index_${lang}.html">${lang}</a> 
         </li>
     `;
     })

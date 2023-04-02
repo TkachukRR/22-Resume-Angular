@@ -23,24 +23,27 @@ img {
 
 body {
   color: rgb(39 39 42);
+  background-color: #ccc;
 
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 16px;
+  line-height: 24px;
 }
 
 h3 {
-  margin: 12px 0;
+  margin: 0 0 12px;
 }
 
 h4 {
-  margin: 12px 0;
+  margin: 0 0 12px;
 }
 
 .wrapper {
   max-width: 1400px;
-  margin: 16px auto;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .container {
@@ -53,21 +56,22 @@ h4 {
 
   padding: 12px;
 
+  background-color: #fff;
   border: 24px solid #7f9f04;
   border-left-width: 0px;
 }
 .aside {
   flex-basis: calc((4 / 12) * 100%);
 
-  padding: 12px;
+  padding: 24px 12px 12px;
 
   color: #f4f4f5;
   background-color: #27272a;
 }
 /* ------------------------------------------ */
 .introduce {
-  padding: 16px 24px;
-  margin-bottom: 8px;
+  padding: 12px 24px 0;
+  margin-bottom: 12px;
 }
 .introduce__name {
   text-align: center;
@@ -85,7 +89,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 2rem;
 
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 .introduce__intro {
   margin-bottom: 4px;
@@ -111,7 +115,7 @@ h4 {
   padding: 8px 16px;
 
   border: 1px solid rgb(192, 192, 192);
-  border-radius: 16px;
+  border-radius: 4px;
 }
 /* ------------------------------------------ */
 
@@ -147,3 +151,106 @@ h4 {
 }
 
 /* ------------------------------------------ */
+.lang__buttons {
+  margin-bottom: 24px;
+}
+
+.language__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.language__item {
+  width: 64px;
+  text-align: center;
+
+  color: #27272a;
+  background-color: #7f9f04;
+
+  font-weight: 900;
+
+  border-radius: 4px;
+  border: 1.5px solid #f4f4f5;
+}
+
+.language__link {
+  display: block;
+  padding: 2px 8px;
+}
+
+/* ------------------------------------------ */
+
+.avatar {
+  padding: 0 12px;
+}
+
+/* ------------------------------------------ */
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.avatar,
+.birthday,
+.location,
+.contacts,
+.skills,
+.lang,
+.soft,
+.hobbies {
+  margin-bottom: 12px;
+}
+
+.birthday__date,
+.location__place,
+.contacts__address,
+.tech__skills,
+.lang__skills,
+.soft__skills,
+.hobbies__list {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.birthday__date li::marker,
+.location__place li::marker,
+.contacts__address li::marker,
+.tech__skills li::marker,
+.lang__skills li::marker,
+.soft__skills li::marker,
+.hobbies__list li::marker {
+  color: #7f9f04;
+}
+
+.educations__list,
+.works__list {
+  padding: 8px;
+}
+
+.educations__item,
+.works__item {
+  padding: 16px 24px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+}
+.educations__item:not(:last-child),
+.works__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.institution__rank,
+.company__position {
+  font-weight: 700;
+}
+
+.company__responsibilities {
+  list-style: disc;
+  margin-left: 32px;
+}
+
+.company__responsibilities li::marker {
+  color: #7f9f04;
+}
