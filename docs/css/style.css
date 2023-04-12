@@ -262,7 +262,7 @@ h4 {
 }
 
 .contacts__address {
-  padding-left: 20px;
+  padding-left: 8px;
 }
 
 .birthday__date li::marker,
@@ -333,14 +333,7 @@ address > a {
 
 address > a > .icon {
   color: #7f9f04;
-  width: 18px;
-  height: 18px;
+  margin-right: 6px;
+  width: 24px;
+  height: 24px;
 }
-
-/* ==========================================
-Single-colored icons can be modified like so:
-.icon-name {
-  font-size: 32px;
-  color: red;
-}
-========================================== */
