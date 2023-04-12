@@ -69,6 +69,13 @@ h4 {
   background-color: #27272a;
 }
 /* ------------------------------------------ */
+.title-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ------------------------------------------ */
 .introduce {
   padding: 12px 24px 0;
   margin-bottom: 12px;
@@ -112,10 +119,18 @@ h4 {
 }
 
 .projects__item {
+  display: flex;
+  flex-direction: column;
+
   padding: 8px 16px;
 
   border: 1px solid rgb(192, 192, 192);
   border-radius: 4px;
+}
+
+.project__buttons {
+  display: flex;
+  justify-content: space-around;
 }
 /* ------------------------------------------ */
 
@@ -128,7 +143,10 @@ h4 {
 }
 .project__technology {
   display: flex;
+  flex-grow: 1;
   gap: 12px;
+
+  margin-bottom: 8px;
 }
 .project__tech {
   font-weight: 600;
@@ -138,16 +156,38 @@ h4 {
 .project__stack {
   display: flex;
   justify-content: center;
+  align-content: start;
   flex-wrap: wrap;
 
-  line-height: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 
-  margin-bottom: 8px;
+  margin: 0 auto;
 }
 
 .project__buttons {
 }
 .project__link {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  width: 45%;
+  padding: 2px 16px;
+
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: 4px;
+}
+
+.project__link > svg {
+  height: 24px;
+  width: 24px;
+}
+
+.project__link:last-of-type > svg {
+  height: 38px;
+  width: 60px;
 }
 
 /* ------------------------------------------ */
@@ -192,6 +232,13 @@ h4 {
   font-style: normal;
 }
 
+.introduce,
+.projects,
+.educations,
+.works {
+  margin-bottom: 12px;
+}
+
 .avatar,
 .birthday,
 .location,
@@ -204,15 +251,18 @@ h4 {
   margin-bottom: 12px;
 }
 
-.birthday__date,
 .location__place,
-.contacts__address,
+.birthday__date,
 .tech__skills,
 .lang__skills,
 .soft__skills,
 .hobbies__list {
-  padding-left: 20px;
+  padding-left: 40px;
   list-style: disc;
+}
+
+.contacts__address {
+  padding-left: 20px;
 }
 
 .birthday__date li::marker,
@@ -266,13 +316,13 @@ h4 {
 }
 
 h3 > .icon {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
 }
 
 h4 > .icon {
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
   color: #7f9f04;
 }
 

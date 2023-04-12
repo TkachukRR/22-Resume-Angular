@@ -44,8 +44,12 @@ function makeProjectItemsMarkup() {
         <ul class="project__stack">${stack}</ul>  
       </div>
       <div class="project__buttons">
-        <a class="project__link btn" href="${project.link}">web</a>
-        <a class="project__link btn" href="${project.urlGit}">git</a>
+        <a class="project__link btn" href="${project.link}">${svgIconMarkup(
+      "www"
+    )}</a>
+        <a class="project__link btn" href="${project.urlGit}">${svgIconMarkup(
+      "git"
+    )}</a>
       </div>
     </li>
   `;
