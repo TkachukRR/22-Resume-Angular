@@ -326,8 +326,15 @@ h4 > .icon {
   color: #7f9f04;
 }
 
+address > a {
+  display: flex;
+  align-items: center;
+}
+
 address > a > .icon {
   color: #7f9f04;
+  width: 18px;
+  height: 18px;
 }
 
 /* ==========================================

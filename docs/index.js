@@ -83,10 +83,10 @@ function makeEducationItemsMarkup() {
     <li class="educations__item institution">
       <h4 class="institution__title">${institution[pageLang].institution}</h4>
       <p class="institution__period">
-        ${dateStart.toLocaleDateString(undefined, options)} - ${
-      dateEnd.toLocaleDateString(undefined, options) === "Invalid Date"
+        ${dateStart.toLocaleString(undefined, options)} - ${
+      dateEnd.toLocaleString(undefined, options) === "Invalid Date"
         ? "now"
-        : dateEnd.toLocaleDateString(undefined, options)
+        : dateEnd.toLocaleString(undefined, options)
     } | 
         <span class="institution__rank">${institution[pageLang].rank}</span>
       </p>
@@ -132,10 +132,10 @@ function makeCompanyItemsMarkup() {
     <li class="works__item company">
       <h4 class="company__title">${company[pageLang].company}</h4>
       <p class="company__period">
-    ${dateStart.toLocaleDateString(undefined, options)} - ${
-      dateEnd.toLocaleDateString(undefined, options) === "Invalid Date"
+    ${dateStart.toLocaleString(undefined, options)} - ${
+      dateEnd.toLocaleString(undefined, options) === "Invalid Date"
         ? "now"
-        : dateEnd.toLocaleDateString(undefined, options)
+        : dateEnd.toLocaleString(undefined, options)
     }
     | 
         <span class="company__position">${company[pageLang].position}</span>
