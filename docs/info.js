@@ -431,6 +431,7 @@ export const info = Object.freeze({
             start: "2004-09-01T00:00:00",
             end: "2009-06-31T00:00:00",
           },
+          obtention: [],
         },
         pl: {
           institution: "Aero-Kosmiczny Uniwersytet Narodowy w Charkowie „HАІ”",
@@ -441,6 +442,7 @@ export const info = Object.freeze({
             start: "2004-09-01T00:00:00",
             end: "2009-06-31T00:00:00",
           },
+          obtention: [],
         },
         ua: {
           institution:
@@ -452,6 +454,7 @@ export const info = Object.freeze({
             start: "2004-09-01T00:00:00",
             end: "2009-06-31T00:00:00",
           },
+          obtention: [],
         },
       },
     ],
