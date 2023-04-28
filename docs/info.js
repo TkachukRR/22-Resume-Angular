@@ -473,7 +473,7 @@ export const info = Object.freeze({
           position: "CEO",
           location: "Kharkiv",
           period: {
-            start: "2009-08-01T00:00:00",
+            start: "2009-09-01T00:00:00",
             end: "2021-11-01T00:00:00",
           },
           responsibilities: [
@@ -488,7 +488,7 @@ export const info = Object.freeze({
           position: "CEO",
           location: "Charków",
           period: {
-            start: "2009-08-01T00:00:00",
+            start: "2009-09-01T00:00:00",
             end: "2021-11-01T00:00:00",
           },
           responsibilities: [
@@ -503,7 +503,7 @@ export const info = Object.freeze({
           position: "Директор",
           location: "Харків",
           period: {
-            start: "2009-08-01T00:00:00",
+            start: "2009-09-01T00:00:00",
             end: "2021-11-01T00:00:00",
           },
           responsibilities: [
@@ -521,7 +521,7 @@ export const info = Object.freeze({
           location: "Kharkiv",
           period: {
             start: "2006-08-01T00:00:00",
-            end: "2009-09-01T00:00:00",
+            end: "2009-08-31T00:00:00",
           },
           responsibilities: [
             "Installation of automatic irrigation systems, repair and maintenance of systems",
@@ -534,7 +534,7 @@ export const info = Object.freeze({
           location: "Charków",
           period: {
             start: "2006-08-01T00:00:00",
-            end: "2009-09-01T00:00:00",
+            end: "2009-08-31T00:00:00",
           },
           responsibilities: [
             "Montaż automatycznych systemów nawadniających, naprawa i konserwacja systemów",
@@ -547,7 +547,7 @@ export const info = Object.freeze({
           location: "Харків",
           period: {
             start: "2006-08-01T00:00:00",
-            end: "2009-09-01T00:00:00",
+            end: "2009-08-31T00:00:00",
           },
           responsibilities: [
             "Монтаж систем автоматичного поливу, ремонт та обслуговування систем",
