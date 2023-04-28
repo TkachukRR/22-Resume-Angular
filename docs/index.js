@@ -91,6 +91,13 @@ function makeEducationItemsMarkup() {
         <span class="institution__rank">${institution[pageLang].rank}</span>
       </p>
       <p class="institution__direction">${institution[pageLang].direction}</p>
+      <ul class="institution__obtention">
+        ${institution[pageLang].obtention
+          ?.map((skill) => {
+            return `<li>${skill}</li>`;
+          })
+          .join("")}
+      </ul>
     </li>
   `;
     return institutionItemsMarkup;
@@ -289,7 +296,22 @@ function makeSkillsListMarkup(skill) {
     .map((skillName) => {
       if (skill === "lang") {
         return `
-          <li class="${skill}__item">${skillName.language} - ${skillName.skill}</li>
+          <li class="${skill}__item">${skillName.language} - ${skillName.skill}
+          <div class="progress-bar green stripes">
+            <span style="width: ${skillName.level}%"></span>
+          </div>
+          </li>
+        `;
+      }
+
+      if (skill === "tech") {
+        return `
+          <li class="${skill}__item">
+          ${skillName.name}
+          <div class="progress-bar green stripes">
+            <span style="width: ${skillName.level}%"></span>
+          </div>
+          </li>
         `;
       }
 
