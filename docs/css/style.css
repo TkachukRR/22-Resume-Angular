@@ -69,6 +69,29 @@ h4 {
   color: #f4f4f5;
   background-color: #27272a;
 }
+@media (max-width: 600px) {
+  .lang__buttons {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .avatar {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14rem;
+  }
+
+  .introduce {
+    min-height: 238px;
+  }
+
+  .introduce {
+    padding-top: 18rem;
+  }
+}
 
 @media (max-width: 800px) {
   .container {
@@ -79,6 +102,16 @@ h4 {
     border: 1.5rem solid #7f9f04;
     border-bottom-width: 0;
   }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .avatar {
+    position: absolute;
+    width: 12rem;
+  }
+  .introduce {
+    padding-left: 12rem;
+  }
   .lang__buttons {
     position: absolute;
     top: 2rem;
@@ -86,14 +119,11 @@ h4 {
   }
 
   .avatar {
-    position: absolute;
     top: 5rem;
     left: 2rem;
-    width: 12rem;
   }
 
   .introduce {
-    padding-left: 12rem;
     min-height: 238px;
   }
 }
