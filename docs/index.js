@@ -58,9 +58,9 @@ function makeProjectItemsMarkup() {
 
         <ul class="project__tasks">${tasks}</ul>
         <div class="project__screenshot">
-          <img  src="${"./imgs/" + project.title + ".jpg"}" alt="Page ${
-      project.title
-    } screenshot">
+          <img  src="${
+            "./imgs/" + project.title.toLocaleLowerCase() + ".jpg"
+          }" alt="Page ${project.title} screenshot">
         </div>
         
       </div>
