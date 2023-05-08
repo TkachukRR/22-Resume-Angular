@@ -256,6 +256,8 @@ export const info = Object.freeze({
           ],
         },
         description: {
+          en: "I developed a project that allows users to quickly and easily find beer using a search function. Users can add items to their favorites, view individual items, and save them on the client-side. The project also includes a basic home page and the ability to perform a new search.",
+          pl: "Opracowałem projekt, który umożliwia użytkownikom szybkie i łatwe wyszukiwanie piwa za pomocą funkcji wyszukiwania. Użytkownicy mogą dodawać elementy do ulubionych, przeglądać poszczególne elementy i zapisywać je po stronie klienta. Projekt zawiera również podstawową stronę główną i możliwość ponownego wyszukiwania.",
           ua: "Я розробив проект, який дозволяє користувачам швидко і зручно знаходити пиво за допомогою пошуку. Користувачі можуть додавати елементи до обраного, переглядати окремі елементи та зберігати їх на клієнтському боці. Проект також містить базову домашню сторінку та можливість повторного пошуку.",
         },
       },
