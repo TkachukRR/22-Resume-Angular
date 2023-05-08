@@ -28,58 +28,90 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 
 h3 {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
 }
 
 h4 {
-  margin: 0 0 12px;
+  margin: 0 0 0.75rem;
 }
 
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .container {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
 }
 
 .main {
   flex-basis: calc((8 / 12) * 100%);
-
-  padding: 12px;
-
+  padding: 0.5rem;
   background-color: #fff;
-  border: 24px solid #7f9f04;
-  border-left-width: 0px;
+  border: 1.5rem solid #7f9f04;
+  border-left-width: 0;
 }
 .aside {
+  display: flex;
+  flex-direction: column;
   flex-basis: calc((4 / 12) * 100%);
 
-  padding: 24px 12px 12px;
+  padding: 1.5rem 0.75rem 0.75rem;
 
   color: #f4f4f5;
   background-color: #27272a;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .main {
+    border: 1.5rem solid #7f9f04;
+    border-bottom-width: 0;
+  }
+  .lang__buttons {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .avatar {
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+    width: 12rem;
+  }
+
+  .introduce {
+    padding-left: 12rem;
+    min-height: 238px;
+  }
 }
 /* ------------------------------------------ */
 .title-flex {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.25rem;
 }
 
 /* ------------------------------------------ */
-.introduce {
-  padding: 12px 24px 0;
-  margin-bottom: 12px;
+@media (min-width: 801px) {
+  .introduce {
+    padding: 0.75rem 1.5rem 0;
+    margin-bottom: 0.75rem;
+  }
 }
+
 .introduce__name {
   text-align: center;
 
@@ -87,7 +119,7 @@ h4 {
   font-size: 1.875rem;
   line-height: 2.25rem;
 
-  margin-bottom: 8px;
+  margin-bottom: 0.25rem;
 }
 .introduce__position {
   text-align: center;
@@ -99,7 +131,7 @@ h4 {
   margin-bottom: 24px;
 }
 .introduce__intro {
-  margin-bottom: 4px;
+  margin-bottom: 0.1rem;
 }
 .introduce__subinfo {
 }
@@ -114,18 +146,18 @@ h4 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   place-content: stretch;
 
-  gap: 8px;
-  padding: 8px;
+  gap: 0.25rem;
+  padding: 0.25rem;
 }
 
 .projects__item {
   display: flex;
   flex-direction: column;
 
-  padding: 8px 16px;
+  padding: 0.25rem 0.5rem;
 
   border: 1px solid rgb(192, 192, 192);
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .project__buttons {
@@ -136,17 +168,15 @@ h4 {
 
 .project__title {
   text-align: center;
-
   font-weight: 700;
-
   background-color: #7f9f04;
 }
 .project__technology {
   display: flex;
   flex-grow: 1;
-  gap: 12px;
+  gap: 0.5rem;
 
-  margin-bottom: 8px;
+  margin-bottom: 0.25rem;
 }
 .project__tech {
   font-weight: 600;
@@ -174,25 +204,25 @@ h4 {
   justify-content: center;
 
   width: 45%;
-  padding: 2px 16px;
+  padding: 0.1rem 0.75rem;
 
   border: 1px solid rgb(192, 192, 192);
   border-radius: 4px;
 }
 
 .project__link > svg {
-  height: 24px;
-  width: 24px;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 
 .project__link:last-of-type > svg {
-  height: 38px;
-  width: 60px;
+  height: 2.5rem;
+  width: 3rem;
 }
 
 /* ------------------------------------------ */
 .lang__buttons {
-  margin-bottom: 24px;
+  margin-bottom: 2rem;
 }
 
 .language__list {
@@ -201,7 +231,7 @@ h4 {
 }
 
 .language__item {
-  width: 64px;
+  width: 4rem;
   text-align: center;
 
   color: #27272a;
@@ -215,13 +245,13 @@ h4 {
 
 .language__link {
   display: block;
-  padding: 2px 8px;
+  padding: 0.1rem 0.5rem;
 }
 
 /* ------------------------------------------ */
 
 .avatar {
-  padding: 0 12px;
+  padding: 0 0.75rem;
 }
 
 /* ------------------------------------------ */
@@ -236,7 +266,7 @@ h4 {
 .projects,
 .educations,
 .works {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .avatar,
@@ -248,7 +278,7 @@ h4 {
 .lang,
 .soft,
 .hobbies {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .location__place,
@@ -257,12 +287,12 @@ h4 {
 .lang__skills,
 .soft__skills,
 .hobbies__list {
-  padding-left: 40px;
+  padding-left: 2.25rem;
   list-style: disc;
 }
 
 .contacts__address {
-  padding-left: 8px;
+  padding-left: 0.25rem;
 }
 
 .birthday__date li::marker,
@@ -277,7 +307,7 @@ h4 {
 
 .educations__list,
 .works__list {
-  padding: 8px;
+  padding: 0.25rem;
 }
 
 .educations__item,
