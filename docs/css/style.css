@@ -173,11 +173,16 @@ h4 {
 }
 .projects__list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   place-content: stretch;
 
   gap: 0.25rem;
   padding: 0.25rem;
+}
+
+@media (min-width: 600px) {
+  .projects__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .projects__item {
@@ -188,6 +193,11 @@ h4 {
 
   border: 1px solid rgb(192, 192, 192);
   border-radius: 0.25rem;
+}
+
+.projects__item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project__buttons {
@@ -203,26 +213,33 @@ h4 {
 }
 .project__technology {
   display: flex;
-  flex-grow: 1;
   gap: 0.5rem;
 
   margin-bottom: 0.25rem;
 }
 .project__tech {
-  font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 .project__stack {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-content: start;
   flex-wrap: wrap;
 
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
 
-  margin: 0 auto;
+.project__tasks {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-left: 32px;
+  list-style: disc;
+}
+
+.project__tasks li::marker {
+  color: #7f9f04;
 }
 
 .project__buttons {
@@ -248,6 +265,40 @@ h4 {
 .project__link:last-of-type > svg {
   height: 2.5rem;
   width: 3rem;
+}
+.project__wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.project__description {
+}
+.project__screenshot {
+  position: absolute;
+  display: block;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #fff;
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.projects__item:hover .project__screenshot {
+  animation: appear 250ms ease forwards;
 }
 
 /* ------------------------------------------ */

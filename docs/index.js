@@ -36,9 +36,34 @@ function makeProjectItemsMarkup() {
       })
       .join(",&nbsp;");
 
+    let tasks = "";
+    if (project.generalTasks) {
+      tasks = project.generalTasks[pageLang]
+        .map((task) => {
+          return `
+      <li>${task}</li>
+      `;
+        })
+        .join("");
+      console.log(tasks);
+    }
+
     projectItemsMarkup += `
     <li class="projects__item project">
       <h4 class="project__title">${project.title}</h4>
+      <div class="project__description">${
+        project.description ? project.description[pageLang] : ""
+      }</div>
+      <div class="project__wrapper">
+
+        <ul class="project__tasks">${tasks}</ul>
+        <div class="project__screenshot">
+          <img  src="${"./imgs/" + project.title + ".jpg"}" alt="Page ${
+      project.title
+    } screenshot">
+        </div>
+        
+      </div>
       <div class="project__technology"> 
         <span class="project__tech">Stack:</span>
         <ul class="project__stack">${stack}</ul>  
