@@ -257,15 +257,12 @@ h4 {
   border-radius: 4px;
 }
 
-.project__link > svg {
-  height: 1.25rem;
-  width: 1.25rem;
+.project__link:hover {
+  background-color: #7f9f04;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project__link:last-of-type > svg {
-  height: 2.5rem;
-  width: 3rem;
-}
 .project__wrapper {
   position: relative;
   flex-grow: 1;
