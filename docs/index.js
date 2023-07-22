@@ -45,7 +45,6 @@ function makeProjectItemsMarkup() {
       `;
         })
         .join("");
-      console.log(tasks);
     }
 
     projectItemsMarkup += `
