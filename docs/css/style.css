@@ -348,7 +348,7 @@ h4 {
 .projects,
 .educations,
 .works {
-  margin-bottom: 0.75rem;
+  margin-bottom: 2rem;
 }
 
 .avatar,
@@ -644,4 +644,8 @@ address > a > .icon {
     opacity: 0;
     width: 95%;
   }
+}
+
+.birthday {
+  display: none;
 }

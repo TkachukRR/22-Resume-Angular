@@ -342,7 +342,7 @@ export const info = Object.freeze({
           direction: "Angular Framework intensive",
           period: {
             start: "2023-01-21T00:00:00",
-            end: "",
+            end: "2023-05-31T00:00:00",
           },
           obtention: [
             "Learning TypeScript",
@@ -363,7 +363,7 @@ export const info = Object.freeze({
           direction: "Intensywny Angular Framework",
           period: {
             start: "2023-01-21T00:00:00",
-            end: "",
+            end: "2023-05-31T00:00:00",
           },
           obtention: [
             "Nauka TypeScript",
@@ -385,7 +385,7 @@ export const info = Object.freeze({
           direction: "Angular Framework - інтенсив",
           period: {
             start: "2023-01-21T00:00:00",
-            end: "",
+            end: "2023-05-31T00:00:00",
           },
           obtention: [
             "Вивчення TypeScript",
@@ -627,6 +627,53 @@ export const info = Object.freeze({
     companies: [
       {
         en: {
+          company: '"Andersen" -  Software Development Company',
+          position: "Junior/Trainee",
+          location: "Warsaw",
+          period: {
+            start: "2023-06-01T00:00:00",
+            end: "",
+          },
+          responsibilities: [
+            "Support of the company's internal product",
+            "Implementation of new features in the existing project",
+            "Optimization of project modules",
+            "Refactoring project modules",
+          ],
+        },
+        pl: {
+          company: '"Andersen" - Firma programistyczna',
+          position: "Junior/Stażysta",
+          location: "Warszawa",
+          period: {
+            start: "2023-06-01T00:00:00",
+            end: "",
+          },
+          responsibilities: [
+            "Wsparcie wewnętrznego produktu firmy",
+            "Implementacja nowych funkcji w istniejącym projekcie",
+            "Optymalizacja modułów projektu",
+            "Refaktoryzacja modułów projektu",
+          ],
+        },
+        ua: {
+          company: '"Andersen" - Компанія з розробки програмного забезпечення',
+          position: "Junior/Trainee",
+          location: "Варшава",
+          period: {
+            start: "2023-06-01T00:00:00",
+            end: "",
+          },
+          responsibilities: [
+            "Підтримка внутрішнього продукту компанії",
+            "Впровадження нових функцій у існуючому проекті",
+            "Оптимізація модулів продукту",
+            "Рефакторинг модулів проекту",
+          ],
+        },
+      },
+      {
+        en: {
           company: "Smart Garden",
           position: "CEO",
           location: "Kharkiv",
@@ -736,6 +783,8 @@ export const info = Object.freeze({
         { name: "Figma", level: "75" },
         { name: "Adobe Photoshop", level: "60" },
         { name: "Responsive/adaptive web design", level: "75" },
+        { name: "Agile", level: "70" },
+        { name: "Scrum", level: "65" },
         { name: "Jira", level: "50" },
         { name: "Trello", level: "50" },
         { name: "Tailwindcss", level: "55" },
@@ -754,6 +803,8 @@ export const info = Object.freeze({
         { name: "Figma", level: "75" },
         { name: "Adobe Photoshop", level: "60" },
         { name: "Responsive/adaptive web design", level: "75" },
+        { name: "Agile", level: "70" },
+        { name: "Scrum", level: "65" },
         { name: "Jira", level: "50" },
         { name: "Trello", level: "50" },
         { name: "Tailwindcss", level: "55" },
@@ -772,6 +823,8 @@ export const info = Object.freeze({
         { name: "Figma", level: "75" },
         { name: "Adobe Photoshop", level: "60" },
         { name: "Responsive/adaptive web design", level: "75" },
+        { name: "Agile", level: "70" },
+        { name: "Scrum", level: "65" },
         { name: "Jira", level: "50" },
         { name: "Trello", level: "50" },
         { name: "Tailwindcss", level: "55" },
