@@ -575,7 +575,7 @@ export const info = Object.freeze({
       {
         en: {
           company: "Smart Garden",
-          position: "CEO",
+          position: "Engineer > Director",
           location: "Kharkiv",
           period: {
             start: "2009-09-01T00:00:00",
@@ -590,7 +590,7 @@ export const info = Object.freeze({
         },
         pl: {
           company: "Smart Garden",
-          position: "CEO",
+          position: "Inżynier > Dyrektor",
           location: "Charków",
           period: {
             start: "2009-09-01T00:00:00",
@@ -605,7 +605,7 @@ export const info = Object.freeze({
         },
         ua: {
           company: "Smart Garden",
-          position: "Директор",
+          position: "Інжинер > Директор",
           location: "Харків",
           period: {
             start: "2006-08-01T00:00:00",
