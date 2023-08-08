@@ -33,7 +33,7 @@ body {
 }
 
 h3 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.75rem 0.75rem;
 }
 
 h4 {
@@ -163,14 +163,8 @@ h4 {
 .introduce__intro {
   margin-bottom: 0.1rem;
 }
-.introduce__subinfo {
-}
 /* ------------------------------------------ */
 
-.projects {
-}
-.projects__title {
-}
 .projects__list {
   display: grid;
   place-content: stretch;
@@ -242,8 +236,6 @@ h4 {
   color: #7f9f04;
 }
 
-.project__buttons {
-}
 .project__link {
   display: flex;
   align-content: center;
@@ -268,8 +260,6 @@ h4 {
   flex-grow: 1;
 }
 
-.project__description {
-}
 .project__screenshot {
   position: absolute;
   display: block;
@@ -348,7 +338,7 @@ h4 {
 .projects,
 .educations,
 .works {
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .avatar,
