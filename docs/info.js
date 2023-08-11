@@ -491,7 +491,7 @@ export const info = Object.freeze({
       {
         en: {
           company: '"Andersen" - Software Development Company',
-          position: "Angular developer trainee > junior",
+          position: "Angular developer trainee ↣ junior",
           location: "Warsaw",
           period: {
             start: "2023-01-21T00:00:00",
@@ -514,7 +514,7 @@ export const info = Object.freeze({
         },
         pl: {
           company: '"Andersen" - Firma zajmująca się tworzeniem oprogramowania',
-          position: "Programista Angular stażysta > junior",
+          position: "Programista Angular stażysta ↣ junior",
           location: "Warszawa",
           period: {
             start: "2023-01-21T00:00:00",
@@ -537,7 +537,7 @@ export const info = Object.freeze({
         },
         ua: {
           company: '"Andersen" - Компанія з розробки програмного забезпечення',
-          position: "Angular developer trainee > junior",
+          position: "Angular developer trainee ↣ junior",
           location: "Варшава",
           period: {
             start: "2023-01-21T00:00:00",
@@ -562,7 +562,7 @@ export const info = Object.freeze({
       {
         en: {
           company: "Smart Garden",
-          position: "Engineer > Director",
+          position: "Engineer ↣ Director",
           location: "Kharkiv",
           period: {
             start: "2009-09-01T00:00:00",
@@ -577,7 +577,7 @@ export const info = Object.freeze({
         },
         pl: {
           company: "Smart Garden",
-          position: "Inżynier > Dyrektor",
+          position: "Inżynier ↣ Dyrektor",
           location: "Charków",
           period: {
             start: "2009-09-01T00:00:00",
@@ -592,7 +592,7 @@ export const info = Object.freeze({
         },
         ua: {
           company: "Smart Garden",
-          position: "Інжинер > Директор",
+          position: "Інжинер ↣ Директор",
           location: "Харків",
           period: {
             start: "2006-08-01T00:00:00",
@@ -693,12 +693,12 @@ export const info = Object.freeze({
         {
           language: "English",
           skill: "intermediate",
-          level: "60",
+          level: "75",
         },
         {
           language: "Polish",
-          skill: "pre-intermediate",
-          level: "40",
+          skill: "intermediate",
+          level: "60",
         },
         {
           language: "Russian",
@@ -715,12 +715,12 @@ export const info = Object.freeze({
         {
           language: "Angielski",
           skill: "zaawansowany",
-          level: "60",
+          level: "75",
         },
         {
           language: "Polski",
-          skill: "początkujący",
-          level: "40",
+          skill: "zaawansowany",
+          level: "60",
         },
         {
           language: "Rosyjski",
@@ -737,12 +737,12 @@ export const info = Object.freeze({
         {
           language: "Англійська",
           skill: "середній",
-          level: "60",
+          level: "75",
         },
         {
           language: "Польська",
-          skill: "нижче середнього",
-          level: "40",
+          skill: "середній",
+          level: "60",
         },
         {
           language: "Російська",
