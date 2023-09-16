@@ -8,6 +8,7 @@ import { makeLangButtonsMarkup } from "./scripts/languageButtons.js";
 import { getBirthdayDate } from "./scripts/birthday.js";
 import { makeContactsMarkup } from "./scripts/contacts.js";
 import { makeSkillsListMarkup } from "./scripts/skills.js";
+import { makeHobbiesMarkup } from "./scripts/hobbies.js";
 
 const refs = {
   pageLang: document.documentElement.lang,
@@ -33,6 +34,8 @@ const refs = {
   langSkill: document.querySelector(".lang__skills"),
   softSkillTitle: document.querySelector(".soft__title"),
   softSkill: document.querySelector(".soft__skills"),
+  hobbiesTitle: document.querySelector(".hobbies__title"),
+  hobbies: document.querySelector(".hobbies__list"),
 };
 
 // Intro==========================================
@@ -143,26 +146,11 @@ refs.softSkill.innerHTML = makeSkillsListMarkup(
   refs.pageLang
 );
 
-// ==========================================
+// Hobbies==========================================
 
-// ==========================================
-
-document.querySelector(".hobbies__title").innerHTML = `
+refs.hobbiesTitle.innerHTML = `
   ${svgIconMarkup("hobbies")}
   ${info.hobbies.sectionTitle[refs.pageLang]}`;
 
-document.querySelector(".hobbies__list").innerHTML = makeHobbiesMarkup("soft");
-
-function makeHobbiesMarkup() {
-  const skillsItemsMarkup = info.hobbies[refs.pageLang]
-    .map((skillName) => {
-      return `
-        <li class="hobbies__item">${skillName}</li>
-      `;
-    })
-    .join("");
-
-  return skillsItemsMarkup;
-}
-
+refs.hobbies.innerHTML = makeHobbiesMarkup(info.hobbies, refs.pageLang);
 // ==========================================
