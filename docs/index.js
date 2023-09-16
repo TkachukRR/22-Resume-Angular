@@ -3,9 +3,10 @@ import { info } from "./info.js";
 import { makeProjectsListMarkup } from "./scripts/projects.js";
 import { makeEducationItemsMarkup } from "./scripts/educations.js";
 import { makeCompanyItemsMarkup } from "./scripts/works.js";
+import { makeLangButtonsMarkup } from "./scripts/languageButtons.js";
 
 const refs = {
-  pageLang: document.querySelector("html").getAttribute("lang"),
+  pageLang: document.documentElement.lang,
   name: document.querySelector(".introduce__name"),
   position: document.querySelector(".introduce__position"),
   intro: document.querySelector(".introduce__intro"),
@@ -15,6 +16,9 @@ const refs = {
   educationTitle: document.querySelector(".educations__title"),
   education: document.querySelector(".educations__list"),
   worksTitle: document.querySelector(".works__title"),
+  langBtns: document.querySelector(".lang__buttons"),
+  birthdayTitle: document.querySelector(".birthday__title"),
+  birthday: document.querySelector(".birthday__date"),
 };
 
 // Intro==========================================
@@ -53,47 +57,36 @@ document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup(
   info.works.companies,
   refs.pageLang
 );
-// ==========================================
 
-function makeLangButtonsMarkup() {
-  const languages = Object.keys(info.firstName);
+// LangButtons==========================================
 
-  const languageButtonsMarkup = languages
-    .map((lang) => {
-      if (lang === "en") {
-        return `
-        <li class="language__item btn">
-          <a class="language__link" href="index.html">${lang}</a> 
-        </li>`;
-      }
-      return `
-        <li class="language__item btn">
-          <a class="language__link" href="index_${lang}.html">${lang}</a> 
-        </li>
-    `;
-    })
-    .join("");
-  return languageButtonsMarkup;
-}
-
-document.querySelector(".lang__buttons").innerHTML = makeLangButtonsMarkup();
+refs.langBtns.innerHTML = makeLangButtonsMarkup(info);
 
 // ==========================================
 const birthday = new Date(info.dateOfBirth.date);
 const options = {
   day: "numeric",
   month: "numeric",
-  year: "numeric",
 };
 
-document.querySelector(".birthday__title").innerHTML = `
+refs.birthdayTitle.innerHTML = `
   ${svgIconMarkup("birth")}
   ${info.dateOfBirth.sectionTitle[refs.pageLang]}
   `;
 
-document.querySelector(
-  ".birthday__date"
-).innerHTML = `<li>${birthday.toLocaleDateString(undefined, options)}</li>`;
+let birth = birthday.toLocaleDateString("ua", options);
+switch (refs.pageLang) {
+  case "en":
+    birth = birth.replace(".08", " August");
+    break;
+  case "pl":
+    birth = birth.replace(".08", " Sierpień");
+    break;
+  case "ua":
+    birth = birth.replace(".08", " Серпня");
+    break;
+}
+refs.birthday.innerHTML = `<li>${birth}</li>`;
 
 // ==========================================
 document.querySelector(".location__title").innerHTML = `
