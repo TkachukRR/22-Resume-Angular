@@ -2,6 +2,7 @@ import { info } from "./info.js";
 
 import { makeProjectsListMarkup } from "./scripts/projects.js";
 import { makeEducationItemsMarkup } from "./scripts/educations.js";
+import { makeCompanyItemsMarkup } from "./scripts/works.js";
 
 const refs = {
   pageLang: document.querySelector("html").getAttribute("lang"),
@@ -13,6 +14,7 @@ const refs = {
   projects: document.querySelector(".projects__list"),
   educationTitle: document.querySelector(".educations__title"),
   education: document.querySelector(".educations__list"),
+  worksTitle: document.querySelector(".works__title"),
 };
 
 // Intro==========================================
@@ -41,55 +43,16 @@ refs.education.innerHTML = makeEducationItemsMarkup(
   refs.pageLang
 );
 
-// ==========================================
+// Works==========================================
 
-document.querySelector(".works__title").innerHTML = `
+refs.worksTitle.innerHTML = `
   ${svgIconMarkup("work")}
   ${info.works.sectionTitle[refs.pageLang]}`;
 
-function makeCompanyItemsMarkup() {
-  let companyItemsMarkup = "";
-
-  info.works.companies.map((company) => {
-    let responsibilities = company[refs.pageLang].responsibilities
-      .map((responsibility) => {
-        return `
-      <li>${responsibility}</li>
-      `;
-      })
-      .join("");
-
-    const dateStart = new Date(company[refs.pageLang].period.start);
-    const dateEnd = new Date(company[refs.pageLang].period.end);
-    const options = {
-      day: "numeric",
-      month: "numeric",
-      year: "numeric",
-    };
-
-    companyItemsMarkup += `
-    <li class="works__item company">
-      <h4 class="company__title">${company[refs.pageLang].company}</h4>
-      <p class="company__period">
-    ${dateStart.toLocaleString(undefined, options).toString()} - ${
-      dateEnd.toLocaleString(undefined, options) === "Invalid Date"
-        ? "now"
-        : dateEnd.toLocaleString(undefined, options).toString()
-    }
-    | 
-        <span class="company__position">${
-          company[refs.pageLang].position
-        }</span>
-      </p>
-      <ul class="company__responsibilities">${responsibilities}</ul>
-    </li>
-  `;
-    return companyItemsMarkup;
-  });
-  return companyItemsMarkup;
-}
-
-document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup();
+document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup(
+  info.works.companies,
+  refs.pageLang
+);
 // ==========================================
 
 function makeLangButtonsMarkup() {
