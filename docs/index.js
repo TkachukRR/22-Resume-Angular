@@ -1,6 +1,7 @@
 import { info } from "./info.js";
 
 import { makeProjectsListMarkup } from "./scripts/projects.js";
+import { makeEducationItemsMarkup } from "./scripts/educations.js";
 
 const refs = {
   pageLang: document.querySelector("html").getAttribute("lang"),
@@ -15,7 +16,6 @@ const refs = {
 };
 
 // Intro==========================================
-
 refs.name.textContent = `${info.firstName[refs.pageLang]} ${
   info.lastName[refs.pageLang]
 }`;
@@ -36,52 +36,10 @@ refs.educationTitle.innerHTML = `
   ${svgIconMarkup("education")}
   ${info.educations.sectionTitle[refs.pageLang]}`;
 
-function makeEducationItemsMarkup() {
-  let institutionItemsMarkup = "";
-
-  info.educations.institutions.map((institution) => {
-    const dateStart = new Date(institution[refs.pageLang].period.start);
-    const dateEnd = new Date(institution[refs.pageLang].period.end);
-    const options = {
-      day: "numeric",
-      month: "numeric",
-      year: "numeric",
-    };
-
-    institutionItemsMarkup += `
-    <li class="educations__item institution">
-      <h4 class="institution__title">${
-        institution[refs.pageLang].institution
-      }</h4>
-      <p class="institution__period">
-        ${dateStart.toLocaleString(undefined, options).toString()} - ${
-      dateEnd.toLocaleString(undefined, options) === "Invalid Date"
-        ? "now"
-        : dateEnd.toLocaleString(undefined, options).toString()
-    } | 
-        <span class="institution__rank">${
-          institution[refs.pageLang].rank
-        }</span>
-      </p>
-      <p class="institution__direction">${
-        institution[refs.pageLang].direction
-      }</p>
-      <ul class="institution__obtention">
-        ${institution[refs.pageLang].obtention
-          ?.map((skill) => {
-            return `<li>${skill}</li>`;
-          })
-          .join("")}
-      </ul>
-    </li>
-  `;
-    return institutionItemsMarkup;
-  });
-
-  return institutionItemsMarkup;
-}
-
-refs.education.innerHTML = makeEducationItemsMarkup();
+refs.education.innerHTML = makeEducationItemsMarkup(
+  info.educations,
+  refs.pageLang
+);
 
 // ==========================================
 
