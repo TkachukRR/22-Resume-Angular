@@ -1,98 +1,47 @@
 import { info } from "./info.js";
-const pageLang = document.querySelector("html").getAttribute("lang");
 
-// ==========================================
+import { makeProjectsListMarkup } from "./scripts/projects.js";
 
-document.querySelector(
-  ".introduce__name"
-).textContent = `${info.firstName[pageLang]} ${info.lastName[pageLang]}`;
+const refs = {
+  pageLang: document.querySelector("html").getAttribute("lang"),
+  name: document.querySelector(".introduce__name"),
+  position: document.querySelector(".introduce__position"),
+  intro: document.querySelector(".introduce__intro"),
+  sub: document.querySelector(".introduce__subinfo"),
+  projectsTitle: document.querySelector(".projects__title"),
+  projects: document.querySelector(".projects__list"),
+  educationTitle: document.querySelector(".educations__title"),
+  education: document.querySelector(".educations__list"),
+};
 
-document.querySelector(
-  ".introduce__position"
-).textContent = `${info.lookingFor[pageLang]}`;
+// Intro==========================================
 
-document.querySelector(
-  ".introduce__intro"
-).textContent = `${info.intro[pageLang]}`;
+refs.name.textContent = `${info.firstName[refs.pageLang]} ${
+  info.lastName[refs.pageLang]
+}`;
+refs.position.textContent = `${info.lookingFor[refs.pageLang]}`;
+refs.intro.textContent = `${info.intro[refs.pageLang]}`;
+refs.sub.textContent = `${info.subInfo[refs.pageLang]}`;
 
-document.querySelector(
-  ".introduce__subinfo"
-).textContent = `${info.subInfo[pageLang]}`;
+// Projects==========================================
+refs.projectsTitle.innerHTML = `
+${svgIconMarkup("projects")} 
+${info.projects.sectionTitle[refs.pageLang]}`;
 
-// ==========================================
-document.querySelector(".projects__title").innerHTML = `
-  ${svgIconMarkup("projects")}
-  ${info.projects.sectionTitle[pageLang]}`;
+refs.projects.innerHTML = makeProjectsListMarkup(info.projects, refs.pageLang);
 
-function makeProjectItemsMarkup() {
-  let projectItemsMarkup = "";
+// Education==========================================
 
-  info.projects.list.map((project) => {
-    const stack = project.stack
-      .map((technology) => {
-        return `
-      <li>${technology}</li>
-      `;
-      })
-      .join(",&nbsp;");
-
-    let tasks = "";
-    if (project.generalTasks) {
-      tasks = project.generalTasks[pageLang]
-        .map((task) => {
-          return `
-      <li>${task}</li>
-      `;
-        })
-        .join("");
-    }
-
-    projectItemsMarkup += `
-    <li class="projects__item project">
-      <h4 class="project__title">${project.title}</h4>
-      <div class="project__description">${
-        project.description ? project.description[pageLang] : ""
-      }</div>
-      <div class="project__wrapper">
-
-        <ul class="project__tasks">${tasks}</ul>
-        <div class="project__screenshot">
-          <img  src="${
-            "./imgs/" + project.title.toLocaleLowerCase() + ".jpg"
-          }" alt="Page ${project.title} screenshot">
-        </div>
-        
-      </div>
-      <div class="project__technology"> 
-        <span class="project__tech">Stack:</span>
-        <ul class="project__stack">${stack}</ul>  
-      </div>
-      <div class="project__buttons">
-        <a class="project__link btn" href="${project.link}">site</a>
-        <a class="project__link btn" href="${project.urlGit}">code</a>
-      </div>
-    </li>
-  `;
-    return projectItemsMarkup;
-  });
-
-  return projectItemsMarkup;
-}
-
-document.querySelector(".projects__list").innerHTML = makeProjectItemsMarkup();
-
-// ==========================================
-
-document.querySelector(".educations__title").innerHTML = `
+refs.educationTitle.innerHTML = `
   ${svgIconMarkup("education")}
-  ${info.educations.sectionTitle[pageLang]}`;
+  ${info.educations.sectionTitle[refs.pageLang]}`;
 
 function makeEducationItemsMarkup() {
   let institutionItemsMarkup = "";
 
   info.educations.institutions.map((institution) => {
-    const dateStart = new Date(institution[pageLang].period.start);
-    const dateEnd = new Date(institution[pageLang].period.end);
+    const dateStart = new Date(institution[refs.pageLang].period.start);
+    const dateEnd = new Date(institution[refs.pageLang].period.end);
     const options = {
       day: "numeric",
       month: "numeric",
@@ -101,18 +50,24 @@ function makeEducationItemsMarkup() {
 
     institutionItemsMarkup += `
     <li class="educations__item institution">
-      <h4 class="institution__title">${institution[pageLang].institution}</h4>
+      <h4 class="institution__title">${
+        institution[refs.pageLang].institution
+      }</h4>
       <p class="institution__period">
         ${dateStart.toLocaleString(undefined, options).toString()} - ${
       dateEnd.toLocaleString(undefined, options) === "Invalid Date"
         ? "now"
         : dateEnd.toLocaleString(undefined, options).toString()
     } | 
-        <span class="institution__rank">${institution[pageLang].rank}</span>
+        <span class="institution__rank">${
+          institution[refs.pageLang].rank
+        }</span>
       </p>
-      <p class="institution__direction">${institution[pageLang].direction}</p>
+      <p class="institution__direction">${
+        institution[refs.pageLang].direction
+      }</p>
       <ul class="institution__obtention">
-        ${institution[pageLang].obtention
+        ${institution[refs.pageLang].obtention
           ?.map((skill) => {
             return `<li>${skill}</li>`;
           })
@@ -126,20 +81,19 @@ function makeEducationItemsMarkup() {
   return institutionItemsMarkup;
 }
 
-document.querySelector(".educations__list").innerHTML =
-  makeEducationItemsMarkup();
+refs.education.innerHTML = makeEducationItemsMarkup();
 
 // ==========================================
 
 document.querySelector(".works__title").innerHTML = `
   ${svgIconMarkup("work")}
-  ${info.works.sectionTitle[pageLang]}`;
+  ${info.works.sectionTitle[refs.pageLang]}`;
 
 function makeCompanyItemsMarkup() {
   let companyItemsMarkup = "";
 
   info.works.companies.map((company) => {
-    let responsibilities = company[pageLang].responsibilities
+    let responsibilities = company[refs.pageLang].responsibilities
       .map((responsibility) => {
         return `
       <li>${responsibility}</li>
@@ -147,8 +101,8 @@ function makeCompanyItemsMarkup() {
       })
       .join("");
 
-    const dateStart = new Date(company[pageLang].period.start);
-    const dateEnd = new Date(company[pageLang].period.end);
+    const dateStart = new Date(company[refs.pageLang].period.start);
+    const dateEnd = new Date(company[refs.pageLang].period.end);
     const options = {
       day: "numeric",
       month: "numeric",
@@ -157,7 +111,7 @@ function makeCompanyItemsMarkup() {
 
     companyItemsMarkup += `
     <li class="works__item company">
-      <h4 class="company__title">${company[pageLang].company}</h4>
+      <h4 class="company__title">${company[refs.pageLang].company}</h4>
       <p class="company__period">
     ${dateStart.toLocaleString(undefined, options).toString()} - ${
       dateEnd.toLocaleString(undefined, options) === "Invalid Date"
@@ -165,7 +119,9 @@ function makeCompanyItemsMarkup() {
         : dateEnd.toLocaleString(undefined, options).toString()
     }
     | 
-        <span class="company__position">${company[pageLang].position}</span>
+        <span class="company__position">${
+          company[refs.pageLang].position
+        }</span>
       </p>
       <ul class="company__responsibilities">${responsibilities}</ul>
     </li>
@@ -211,7 +167,7 @@ const options = {
 
 document.querySelector(".birthday__title").innerHTML = `
   ${svgIconMarkup("birth")}
-  ${info.dateOfBirth.sectionTitle[pageLang]}
+  ${info.dateOfBirth.sectionTitle[refs.pageLang]}
   `;
 
 document.querySelector(
@@ -221,18 +177,18 @@ document.querySelector(
 // ==========================================
 document.querySelector(".location__title").innerHTML = `
 ${svgIconMarkup("location")}
-${info.location.sectionTitle[pageLang]}
+${info.location.sectionTitle[refs.pageLang]}
 `;
 
-document.querySelector(
-  ".location__place"
-).innerHTML = `<li>${info.location[pageLang]}</li>`;
+document.querySelector(".location__place").innerHTML = `<li>${
+  info.location[refs.pageLang]
+}</li>`;
 
 // ==========================================
 
 document.querySelector(".contacts__title").innerHTML = `
 ${svgIconMarkup("contacts")}
-${info.contacts.sectionTitle[pageLang]}
+${info.contacts.sectionTitle[refs.pageLang]}
 `;
 
 function makeContactsMarkup() {
@@ -285,7 +241,7 @@ document.querySelector(".contacts__address").innerHTML = makeContactsMarkup();
 
 document.querySelector(".tech__title").innerHTML = `
 ${svgIconMarkup("skill-tech")}
-${info.skills.tech.sectionTitle[pageLang]}
+${info.skills.tech.sectionTitle[refs.pageLang]}
 `;
 
 document.querySelector(".tech__skills").innerHTML =
@@ -295,7 +251,7 @@ document.querySelector(".tech__skills").innerHTML =
 
 document.querySelector(".lang__title").innerHTML = `
 ${svgIconMarkup("skill-lang")}
-${info.skills.lang.sectionTitle[pageLang]}`;
+${info.skills.lang.sectionTitle[refs.pageLang]}`;
 
 document.querySelector(".lang__skills").innerHTML =
   makeSkillsListMarkup("lang");
@@ -304,7 +260,7 @@ document.querySelector(".lang__skills").innerHTML =
 
 document.querySelector(".soft__title").innerHTML = `
 ${svgIconMarkup("skill-soft")}
-${info.skills.soft.sectionTitle[pageLang]}`;
+${info.skills.soft.sectionTitle[refs.pageLang]}`;
 
 document.querySelector(".soft__skills").innerHTML =
   makeSkillsListMarkup("soft");
@@ -312,7 +268,7 @@ document.querySelector(".soft__skills").innerHTML =
 // ==========================================
 
 function makeSkillsListMarkup(skill) {
-  const skillsItemsMarkup = info.skills[skill][pageLang]
+  const skillsItemsMarkup = info.skills[skill][refs.pageLang]
     .map((skillName) => {
       if (skill === "lang") {
         return `
@@ -348,12 +304,12 @@ function makeSkillsListMarkup(skill) {
 
 document.querySelector(".hobbies__title").innerHTML = `
   ${svgIconMarkup("hobbies")}
-  ${info.hobbies.sectionTitle[pageLang]}`;
+  ${info.hobbies.sectionTitle[refs.pageLang]}`;
 
 document.querySelector(".hobbies__list").innerHTML = makeHobbiesMarkup("soft");
 
 function makeHobbiesMarkup() {
-  const skillsItemsMarkup = info.hobbies[pageLang]
+  const skillsItemsMarkup = info.hobbies[refs.pageLang]
     .map((skillName) => {
       return `
         <li class="hobbies__item">${skillName}</li>
