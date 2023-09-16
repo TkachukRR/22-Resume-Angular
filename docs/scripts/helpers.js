@@ -12,3 +12,11 @@ export function getLocalDate(stringDate) {
 
   return date.toLocaleString(undefined, options);
 }
+
+export function svgIconMarkup(id) {
+  return `
+    <svg class="icon icon-${id}">
+      <use xlink:href="#icon-${id}"></use>
+    </svg>
+  `;
+}

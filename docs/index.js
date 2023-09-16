@@ -1,10 +1,13 @@
 import { info } from "./info.js";
 
+import { svgIconMarkup } from "./scripts/helpers.js";
 import { makeProjectsListMarkup } from "./scripts/projects.js";
 import { makeEducationItemsMarkup } from "./scripts/educations.js";
 import { makeCompanyItemsMarkup } from "./scripts/works.js";
 import { makeLangButtonsMarkup } from "./scripts/languageButtons.js";
 import { getBirthdayDate } from "./scripts/birthday.js";
+import { makeContactsMarkup } from "./scripts/contacts.js";
+import { makeSkillsListMarkup } from "./scripts/skills.js";
 
 const refs = {
   pageLang: document.documentElement.lang,
@@ -20,6 +23,16 @@ const refs = {
   langBtns: document.querySelector(".lang__buttons"),
   birthdayTitle: document.querySelector(".birthday__title"),
   birthday: document.querySelector(".birthday__date"),
+  locationTitle: document.querySelector(".location__title"),
+  location: document.querySelector(".location__place"),
+  contactsTitle: document.querySelector(".contacts__title"),
+  contacts: document.querySelector(".contacts__address"),
+  techSkillTitle: document.querySelector(".tech__title"),
+  techSkill: document.querySelector(".tech__skills"),
+  langSkillTitle: document.querySelector(".lang__title"),
+  langSkill: document.querySelector(".lang__skills"),
+  softSkillTitle: document.querySelector(".soft__title"),
+  softSkill: document.querySelector(".soft__skills"),
 };
 
 // Intro==========================================
@@ -63,7 +76,7 @@ document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup(
 
 refs.langBtns.innerHTML = makeLangButtonsMarkup(info);
 
-// ==========================================
+// Birthday==========================================
 
 refs.birthdayTitle.innerHTML = `
   ${svgIconMarkup("birth")}
@@ -75,131 +88,62 @@ refs.birthday.innerHTML = `<li>${getBirthdayDate(
   refs.pageLang
 )}</li>`;
 
-// ==========================================
-document.querySelector(".location__title").innerHTML = `
+// Location==========================================
+
+refs.locationTitle.innerHTML = `
 ${svgIconMarkup("location")}
 ${info.location.sectionTitle[refs.pageLang]}
 `;
 
-document.querySelector(".location__place").innerHTML = `<li>${
-  info.location[refs.pageLang]
-}</li>`;
+refs.location.innerHTML = `<li>${info.location[refs.pageLang]}</li>`;
 
-// ==========================================
+// Contacts==========================================
 
-document.querySelector(".contacts__title").innerHTML = `
+refs.contactsTitle.innerHTML = `
 ${svgIconMarkup("contacts")}
 ${info.contacts.sectionTitle[refs.pageLang]}
 `;
 
-function makeContactsMarkup() {
-  const contactsTypes = Object.keys(info.contacts.contacts);
+refs.contacts.innerHTML = makeContactsMarkup(info.contacts.contacts);
 
-  const markup = contactsTypes
-    .map((contactType) => {
-      if (
-        contactType === "phone" &&
-        typeof info.contacts.contacts[contactType] === "object"
-      ) {
-        const phonesMarkup = info.contacts.contacts[contactType]
-          .map((phone) => {
-            return `
-              <a href="${"tel:" + phone}">
-                ${svgIconMarkup("phone")}
-                ${phone}
-              </a>
-            `;
-          })
-          .join("");
+// Tech==========================================
 
-        return phonesMarkup;
-      }
-
-      if (contactType === "email") {
-        return `
-          <a href="${"email:" + info.contacts.contacts[contactType]}">
-            ${svgIconMarkup("email")}
-            ${info.contacts.contacts[contactType]}
-          </a>
-        `;
-      }
-
-      return `
-          <a href="${info.contacts.contacts[contactType]}">
-            ${svgIconMarkup(contactType)}
-            ${info.contacts.contacts[contactType]}
-          </a>
-        `;
-    })
-    .join("");
-
-  return markup;
-}
-
-document.querySelector(".contacts__address").innerHTML = makeContactsMarkup();
-
-// ==========================================
-
-document.querySelector(".tech__title").innerHTML = `
+refs.techSkillTitle.innerHTML = `
 ${svgIconMarkup("skill-tech")}
 ${info.skills.tech.sectionTitle[refs.pageLang]}
 `;
 
-document.querySelector(".tech__skills").innerHTML =
-  makeSkillsListMarkup("tech");
+refs.techSkill.innerHTML = makeSkillsListMarkup(
+  "tech",
+  info.skills,
+  refs.pageLang
+);
 
-// ==========================================
+// Lang==========================================
 
-document.querySelector(".lang__title").innerHTML = `
+refs.langSkillTitle.innerHTML = `
 ${svgIconMarkup("skill-lang")}
 ${info.skills.lang.sectionTitle[refs.pageLang]}`;
 
-document.querySelector(".lang__skills").innerHTML =
-  makeSkillsListMarkup("lang");
+refs.langSkill.innerHTML = makeSkillsListMarkup(
+  "lang",
+  info.skills,
+  refs.pageLang
+);
 
-// ==========================================
+// Soft==========================================
 
-document.querySelector(".soft__title").innerHTML = `
+refs.softSkillTitle.innerHTML = `
 ${svgIconMarkup("skill-soft")}
 ${info.skills.soft.sectionTitle[refs.pageLang]}`;
 
-document.querySelector(".soft__skills").innerHTML =
-  makeSkillsListMarkup("soft");
+refs.softSkill.innerHTML = makeSkillsListMarkup(
+  "soft",
+  info.skills,
+  refs.pageLang
+);
 
 // ==========================================
-
-function makeSkillsListMarkup(skill) {
-  const skillsItemsMarkup = info.skills[skill][refs.pageLang]
-    .map((skillName) => {
-      if (skill === "lang") {
-        return `
-          <li class="${skill}__item">${skillName.language} - ${skillName.skill}
-          <div class="progress-bar green stripes">
-            <span style="width: ${skillName.level}%"></span>
-          </div>
-          </li>
-        `;
-      }
-
-      if (skill === "tech") {
-        return `
-          <li class="${skill}__item">
-          ${skillName.name}
-          <div class="progress-bar green stripes">
-            <span style="width: ${skillName.level}%"></span>
-          </div>
-          </li>
-        `;
-      }
-
-      return `
-        <li class="${skill}__item">${skillName}</li>
-      `;
-    })
-    .join("");
-
-  return skillsItemsMarkup;
-}
 
 // ==========================================
 
@@ -222,11 +166,3 @@ function makeHobbiesMarkup() {
 }
 
 // ==========================================
-
-function svgIconMarkup(id) {
-  return `
-    <svg class="icon icon-${id}">
-      <use xlink:href="#icon-${id}"></use>
-    </svg>
-  `;
-}
