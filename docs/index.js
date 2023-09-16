@@ -4,6 +4,7 @@ import { makeProjectsListMarkup } from "./scripts/projects.js";
 import { makeEducationItemsMarkup } from "./scripts/educations.js";
 import { makeCompanyItemsMarkup } from "./scripts/works.js";
 import { makeLangButtonsMarkup } from "./scripts/languageButtons.js";
+import { getBirthdayDate } from "./scripts/birthday.js";
 
 const refs = {
   pageLang: document.documentElement.lang,
@@ -63,30 +64,16 @@ document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup(
 refs.langBtns.innerHTML = makeLangButtonsMarkup(info);
 
 // ==========================================
-const birthday = new Date(info.dateOfBirth.date);
-const options = {
-  day: "numeric",
-  month: "numeric",
-};
 
 refs.birthdayTitle.innerHTML = `
   ${svgIconMarkup("birth")}
   ${info.dateOfBirth.sectionTitle[refs.pageLang]}
   `;
 
-let birth = birthday.toLocaleDateString("ua", options);
-switch (refs.pageLang) {
-  case "en":
-    birth = birth.replace(".08", " August");
-    break;
-  case "pl":
-    birth = birth.replace(".08", " Sierpień");
-    break;
-  case "ua":
-    birth = birth.replace(".08", " Серпня");
-    break;
-}
-refs.birthday.innerHTML = `<li>${birth}</li>`;
+refs.birthday.innerHTML = `<li>${getBirthdayDate(
+  info.dateOfBirth.date,
+  refs.pageLang
+)}</li>`;
 
 // ==========================================
 document.querySelector(".location__title").innerHTML = `
