@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-@import url(./normalize.css);
-@import url(./project-card.css);
+@import "./normalize.css";
+@import "./project-card.css";
 
 body {
   color: rgb(39 39 42);

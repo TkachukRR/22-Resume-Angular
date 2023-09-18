@@ -193,7 +193,7 @@ export const info = Object.freeze({
         title: "Web-Studio",
         link: "https://tkachukrr.github.io/09-web-studio/",
         urlGit: "https://github.com/TkachukRR/09-web-studio",
-        stack: ["HTML5", "CSS3", "JavaScript"],
+        stack: ["HTML5", "SASS", "Mobile first", "RWD", "JavaScript"],
         generalTasks: {
           en: [
             "Familiarization with the design.",
@@ -232,11 +232,9 @@ export const info = Object.freeze({
           en: "The task was to create a website for a web design studio according to the design. The following tasks were completed to implement the project:",
           pl: "Zadaniem było stworzenie strony internetowej dla studia projektowania stron internetowych zgodnie z projektem. Do realizacji projektu wykonano następujące zadania:",
           ua: "Задача полягала у створення веб-сайту для студії, котра займається веб дизайном, згідно з макету. Сайт відображає інформацію про студію, працівників та замовників, а також портфоліо з виконаними роботами. Для реалізації проекту були виконані такі задачі:",
-        },
-        description: {
-          en: "The task was to create a website for a web design studio according to the design. The following tasks were completed to implement the project:",
-          pl: "Zadaniem było stworzenie strony internetowej dla studia projektowania stron internetowych zgodnie z projektem. Do realizacji projektu wykonano następujące zadania:",
-          ua: "Задача полягала у створення веб-сайту для студії, котра займається веб дизайном, згідно з макету. Сайт відображає інформацію про студію, працівників та замовників, а також портфоліо з виконаними роботами. Для реалізації проекту були виконані такі задачі:",
+          en: "This pet project represents a two-page website developed using modern web development technologies. SASS preprocessor was used for styling. The website is also adapted for proper display on various mobile devices, and the 'Mobile first' approach was applied to improve the interface. In addition, the website's functionality has been extended using JavaScript.",
+          pl: 'Ten projekt jest dwustronny stroną internetową, stworzoną przy użyciu nowoczesnych technologii web developmentu. Do stylizacji wykorzystano preprocesor SASS. Strona jest również dostosowana do poprawnego wyświetlania na różnych urządzeniach mobilnych, a do jej tworzenia zastosowano zasadę "Mobile first" w celu poprawy interfejsu. Ponadto funkcjonalność strony została rozszerzona za pomocą JavaScript.',
+          ua: 'Цей пет-проект представляє собою двосторінковий веб-сайт, розроблений з використанням сучасних технологій веб-розробки. Для стилізації використовувався препроцесор SASS. Сайт також адаптований для коректного відображення на різних мобільних пристроях, і для його створення був застосований принцип "Mobile first" для покращення інтерфейсу. Крім того, функціональність сайту була розширена за допомогою використання Javascript.',
         },
       },
       // {
