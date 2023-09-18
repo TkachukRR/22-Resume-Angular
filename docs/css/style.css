@@ -1,25 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a,
-a:visited {
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  width: 100%;
-}
+@import url(./normalize.css);
+@import url(./project-card.css);
 
 body {
   color: rgb(39 39 42);
@@ -181,103 +162,9 @@ h4 {
   }
 }
 
-.projects__item {
-  display: flex;
-  flex-direction: column;
-
-  padding: 0.25rem 0.5rem;
-
-  border: 1px solid rgb(192, 192, 192);
-  border-radius: 0.25rem;
-}
-
 .projects__item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.project__buttons {
-  display: flex;
-  justify-content: space-around;
-}
-/* ------------------------------------------ */
-
-.project__title {
-  text-align: center;
-  font-weight: 700;
-  background-color: #7f9f04;
-}
-.project__technology {
-  display: flex;
-  gap: 0.5rem;
-
-  margin-bottom: 0.25rem;
-}
-.project__tech {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-.project__stack {
-  display: flex;
-  justify-content: start;
-  align-content: start;
-  flex-wrap: wrap;
-
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.project__stack li:not(:last-child)::after {
-  content: ",";
-  margin-right: 0.1rem;
-}
-
-.project__tasks {
-  font-size: 1rem;
-  line-height: 1rem;
-  margin-left: 32px;
-  list-style: disc;
-}
-
-.project__tasks li::marker {
-  color: #7f9f04;
-}
-
-.project__link {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-
-  width: 45%;
-  padding: 0.1rem 0.75rem;
-
-  border: 1px solid rgb(192, 192, 192);
-  border-radius: 4px;
-}
-
-.project__link:hover {
-  background-color: #7f9f04;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.project__wrapper {
-  display: flex;
-  gap: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .project__wrapper {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-}
-
-.project__screenshot {
-  max-width: 192px;
-  height: 108px;
-  overflow: hidden;
 }
 
 /* ------------------------------------------ */

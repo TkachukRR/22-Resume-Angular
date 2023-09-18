@@ -5,7 +5,7 @@ export function makeProjectsListMarkup(projects, pageLang) {
             <li class="projects__item project">
                 <h4 class="project__title">${project.title}</h4>
                 <div class="project__wrapper">
-                    <div>
+                    <div class="project__info">
                         <p class="project__description">${
                           project.description[pageLang]
                         }</p>
@@ -15,7 +15,7 @@ export function makeProjectsListMarkup(projects, pageLang) {
                         </div>
 
                     </div>
-                    <div>
+                    <div class="project__subinfo">
                     <div class="project__screenshot">
                         <img 
                             src="${
