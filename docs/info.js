@@ -362,8 +362,8 @@ export const info = Object.freeze({
           rank: "Trainee",
           direction: "Angular Framework intensive",
           period: {
-            start: "2022-11-01T00:00:00",
-            end: "2023-01-20T00:00:00",
+            start: "2022-09-01T00:00:00",
+            end: "2022-10-30T00:00:00",
           },
           obtention: [
             "Learning and implementation projects using TypeScript and the Angular framework",
@@ -378,8 +378,8 @@ export const info = Object.freeze({
           rank: "Stażysta",
           direction: "Intensywny Angular Framework",
           period: {
-            start: "2022-11-01T00:00:00",
-            end: "2023-01-20T00:00:00",
+            start: "2022-09-01T00:00:00",
+            end: "2022-10-30T00:00:00",
           },
           obtention: [
             "Nauka ta realizacja projektow z użyciem TypeScript ta frameworka Angular",
@@ -395,8 +395,8 @@ export const info = Object.freeze({
           rank: "Trainee",
           direction: "Angular Framework - інтенсив",
           period: {
-            start: "2022-11-01T00:00:00",
-            end: "2023-01-20T00:00:00",
+            start: "2022-09-01T00:00:00",
+            end: "2022-10-30T00:00:00",
           },
           obtention: [
             "Вивчення та реалізація проектів з TypeScript та Angular",
@@ -414,7 +414,7 @@ export const info = Object.freeze({
           direction: "Fullstack JavaScript developer",
           period: {
             start: "2021-11-01T00:00:00",
-            end: "2022-09-31T00:00:00",
+            end: "2022-08-30T00:00:00",
           },
           obtention: [
             "Theoretical and practical knowledge in HTML5 and CSS3",
@@ -430,7 +430,7 @@ export const info = Object.freeze({
           direction: "Fullstack JavaScript developer",
           period: {
             start: "2021-11-01T00:00:00",
-            end: "2022-09-31T00:00:00",
+            end: "2022-08-30T00:00:00",
           },
           obtention: [
             "Teoretyczna i praktyczna wiedza z HTML5 i CSS3",
@@ -446,7 +446,7 @@ export const info = Object.freeze({
           direction: "Fullstack JavaScript developer",
           period: {
             start: "2021-11-01T00:00:00",
-            end: "2022-09-31T00:00:00",
+            end: "2022-08-30T00:00:00",
           },
           obtention: [
             "Теоретичні та практичні знання в HTML5 та CSS3",
@@ -509,7 +509,7 @@ export const info = Object.freeze({
           position: "Angular developer trainee ↣ junior",
           location: "Warsaw",
           period: {
-            start: "2023-01-21T00:00:00",
+            start: "2022-10-01T00:00:00",
             end: "2023-08-03T00:00:00",
           },
           responsibilities: [
@@ -532,7 +532,7 @@ export const info = Object.freeze({
           position: "Programista Angular stażysta ↣ junior",
           location: "Warszawa",
           period: {
-            start: "2023-01-21T00:00:00",
+            start: "2022-10-01T00:00:00",
             end: "2023-08-03T00:00:00",
           },
           responsibilities: [
@@ -555,7 +555,7 @@ export const info = Object.freeze({
           position: "Angular developer trainee ↣ junior",
           location: "Варшава",
           period: {
-            start: "2023-01-21T00:00:00",
+            start: "2022-10-01T00:00:00",
             end: "2023-08-03T00:00:00",
           },
           responsibilities: [

@@ -1,7 +1,7 @@
 export function getLocalDate(stringDate) {
   const date = new Date(stringDate);
   const options = {
-    day: "numeric",
+    // day: "numeric",
     month: "numeric",
     year: "numeric",
   };
