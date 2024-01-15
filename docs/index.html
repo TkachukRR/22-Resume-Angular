@@ -153,68 +153,87 @@
     <div class="wrapper">
       <div class="container">
         <main class="main">
-          <div class="introduce">
-            <h1 class="introduce__name"></h1>
-            <h2 class="introduce__position"></h2>
-            <p class="introduce__intro"></p>
-            <p class="introduce__subinfo"></p>
-          </div>
+          <div class="main__container">
+            <section class="introduce">
+              <h1 class="introduce__name"></h1>
+              <h2 class="introduce__position"></h2>
+              <p class="introduce__intro"></p>
+              <p class="introduce__subinfo"></p>
+            </section>
 
-          <div class="works">
-            <h3 class="works__title title-flex"></h3>
-            <ul class="works__list"></ul>
-          </div>
+            <section class="works">
+              <h3 class="works__title title-flex"></h3>
+              <ul class="works__list"></ul>
+            </section>
 
-          <div class="educations">
-            <h3 class="educations__title title-flex"></h3>
-            <ul class="educations__list"></ul>
-          </div>
-
-          <div class="projects">
-            <h3 class="projects__title title-flex"></h3>
-            <ul class="projects__list"></ul>
+            <section class="educations">
+              <h3 class="educations__title title-flex"></h3>
+              <ul class="educations__list"></ul>
+            </section>
           </div>
         </main>
         <aside class="aside">
-          <ul class="lang__buttons language__list"></ul>
-
-          <img class="avatar" src="./imgs/profile.png" alt="Roman Tkachuk" />
-
-          <div class="birthday">
-            <h4 class="birthday__title title-flex"></h4>
-            <ul class="birthday__date"></ul>
-          </div>
-
-          <div class="location">
-            <h4 class="location__title title-flex"></h4>
-            <ul class="location__place"></ul>
-          </div>
-
-          <div class="contacts">
-            <h4 class="contacts__title title-flex"></h4>
-            <address class="contacts__address"></address>
-          </div>
-
-          <div class="skills">
-            <div class="tech">
-              <h4 class="tech__title title-flex"></h4>
-              <ul class="tech__skills"></ul>
+          <div class="aside__container">
+            <div class="avatar">
+              <svg viewBox="0 0 1024 1024" style="width: 100%; height: 100%">
+                <defs>
+                  <clipPath id="hexagon_clip">
+                    <path
+                      id="hexagon"
+                      d="M75.094,306.009c0-27.5,19.413-61.375,43.14-75.277L468.861,25.286c23.727-13.902,62.553-13.902,86.28,0 l350.625,205.445c23.729,13.902,43.141,47.777,43.141,75.277v412c0,27.5-19.412,61.375-43.141,75.277L555.141,998.731 c-23.727,13.901-62.553,13.901-86.28,0L118.234,793.286c-23.727-13.902-43.14-47.777-43.14-75.277V306.009z"
+                    />
+                  </clipPath>
+                </defs>
+                <image
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height="100%"
+                  xlink:href="./imgs/profile.png"
+                  clip-path="url(#hexagon_clip)"
+                />
+                <use
+                  xlink:href="#hexagon"
+                  x="0"
+                  y="0"
+                  stroke="var(--color-border-avatar)"
+                  stroke-width="20"
+                  fill="transparent"
+                />
+              </svg>
             </div>
 
-            <div class="lang">
-              <h4 class="lang__title title-flex"></h4>
-              <ul class="lang__skills"></ul>
+            <div class="location">
+              <h4 class="location__title title-flex"></h4>
+              <ul class="location__place"></ul>
             </div>
 
-            <div class="soft">
-              <h4 class="soft__title title-flex"></h4>
-              <ul class="soft__skills"></ul>
+            <div class="contacts">
+              <h4 class="contacts__title title-flex"></h4>
+              <address class="contacts__address"></address>
             </div>
-          </div>
 
-          <div class="hobbies">
-            <h4 class="hobbies__title title-flex"></h4>
-            <ul class="hobbies__list"></ul>
+            <div class="skills">
+              <div class="tech">
+                <h4 class="tech__title title-flex"></h4>
+                <ul class="tech__skills"></ul>
+              </div>
+
+              <div class="lang">
+                <h4 class="lang__title title-flex"></h4>
+                <ul class="lang__skills"></ul>
+              </div>
+
+              <div class="soft">
+                <h4 class="soft__title title-flex"></h4>
+                <ul class="soft__skills"></ul>
+              </div>
+            </div>
+
+            <div class="hobbies">
+              <h4 class="hobbies__title title-flex"></h4>
+              <ul class="hobbies__list"></ul>
+            </div>
           </div>
         </aside>
       </div>

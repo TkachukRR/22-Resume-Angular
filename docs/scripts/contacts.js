@@ -32,10 +32,19 @@ export function makeContactsMarkup(contacts) {
         `;
       }
 
+      if (contactType === "linkedIn") {
+        return `
+          <a href="${contacts[contactType]}">
+            ${svgIconMarkup(contactType)}
+            ${contacts[contactType].slice(12)}
+          </a>
+        `;
+      }
+
       return `
           <a href="${contacts[contactType]}">
             ${svgIconMarkup(contactType)}
-            ${contacts[contactType]}
+            ${contacts[contactType].slice(8)}
           </a>
         `;
     })

@@ -16,14 +16,14 @@ const refs = {
   position: document.querySelector(".introduce__position"),
   intro: document.querySelector(".introduce__intro"),
   sub: document.querySelector(".introduce__subinfo"),
-  projectsTitle: document.querySelector(".projects__title"),
-  projects: document.querySelector(".projects__list"),
+  // projectsTitle: document.querySelector(".projects__title"),
+  // projects: document.querySelector(".projects__list"),
   educationTitle: document.querySelector(".educations__title"),
   education: document.querySelector(".educations__list"),
   worksTitle: document.querySelector(".works__title"),
-  langBtns: document.querySelector(".lang__buttons"),
-  birthdayTitle: document.querySelector(".birthday__title"),
-  birthday: document.querySelector(".birthday__date"),
+  // langBtns: document.querySelector(".lang__buttons"),
+  // birthdayTitle: document.querySelector(".birthday__title"),
+  // birthday: document.querySelector(".birthday__date"),
   locationTitle: document.querySelector(".location__title"),
   location: document.querySelector(".location__place"),
   contactsTitle: document.querySelector(".contacts__title"),
@@ -47,11 +47,11 @@ refs.intro.textContent = `${info.intro[refs.pageLang]}`;
 refs.sub.textContent = `${info.subInfo[refs.pageLang]}`;
 
 // Projects==========================================
-refs.projectsTitle.innerHTML = `
-${svgIconMarkup("projects")} 
-${info.projects.sectionTitle[refs.pageLang]}`;
+// refs.projectsTitle.innerHTML = `
+// ${svgIconMarkup("projects")}
+// ${info.projects.sectionTitle[refs.pageLang]}`;
 
-refs.projects.innerHTML = makeProjectsListMarkup(info.projects, refs.pageLang);
+// refs.projects.innerHTML = makeProjectsListMarkup(info.projects, refs.pageLang);
 
 // Education==========================================
 
@@ -77,19 +77,19 @@ document.querySelector(".works__list").innerHTML = makeCompanyItemsMarkup(
 
 // LangButtons==========================================
 
-refs.langBtns.innerHTML = makeLangButtonsMarkup(info);
+// refs.langBtns.innerHTML = makeLangButtonsMarkup(info);
 
 // Birthday==========================================
 
-refs.birthdayTitle.innerHTML = `
-  ${svgIconMarkup("birth")}
-  ${info.dateOfBirth.sectionTitle[refs.pageLang]}
-  `;
+// refs.birthdayTitle.innerHTML = `
+//   ${svgIconMarkup("birth")}
+//   ${info.dateOfBirth.sectionTitle[refs.pageLang]}
+//   `;
 
-refs.birthday.innerHTML = `<li>${getBirthdayDate(
-  info.dateOfBirth.date,
-  refs.pageLang
-)}</li>`;
+// refs.birthday.innerHTML = `<li>${getBirthdayDate(
+//   info.dateOfBirth.date,
+//   refs.pageLang
+// )}</li>`;
 
 // Location==========================================
 

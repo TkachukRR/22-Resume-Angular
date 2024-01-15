@@ -1,0 +1,10 @@
+.introduce {
+  padding: 0 var(--padding-l);
+}
+.introduce__position {
+  margin-bottom: var(--margin-m);
+}
+
+.introduce__intro {
+  white-space: pre-line;
+}
